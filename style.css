@@ -774,14 +774,14 @@ body {
 
 @media screen and (max-width: 767px) {
     .chat-sidebar {
-        top: unset;
-        bottom: 0;
+        /* top: unset;
+        bottom: 0; */
         width: 100%;
         height: 48px;
     }
-    .chat-sidebar-logo {
+    /* .chat-sidebar-logo {
         display: none;
-    }
+    } */
     .chat-sidebar-menu {
         flex-direction: row;
         padding: 0;
@@ -833,6 +833,7 @@ body {
 
     .chat-content {
         position: relative;
+        padding-top: 156px;
         height: calc(100% - 48px);
     }
     .conversation.active {
