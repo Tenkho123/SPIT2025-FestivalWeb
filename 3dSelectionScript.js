@@ -101,6 +101,30 @@ document.addEventListener("DOMContentLoaded", function () {
         startX = e.pageX || e.touches[0].pageX;
     }
 
+    // function dragStart(e) {
+    //     isDragging = true;
+    //     startX = e.pageX || e.touches[0].pageX;
+    //     startY = e.pageY || e.touches[0].pageY;
+    // }
+
+    // function drag(e) {
+    //     if (!isDragging) return;
+
+    //     const currentX = e.pageX || (e.touches ? e.touches[0].pageX : startX);
+    //     const currentY = e.pageY || (e.touches ? e.touches[0].pageY : startY);
+    //     const diffX = currentX - startX;
+    //     const diffY = currentY - startY;
+
+    //     // Detect if the gesture is more horizontal than vertical
+    //     if (Math.abs(diffX) > Math.abs(diffY)) {
+    //         e.preventDefault(); // Only prevent default if it's a horizontal drag
+
+    //         const sensitivity = 0.1;
+    //         const newTheta = theta + diffX * sensitivity;
+    //         carousel.style.transform = `rotateY(${newTheta}deg)`;
+    //     }
+    // }
+
     function drag(e) {
         if (!isDragging) return;
         e.preventDefault(); // Prevent default scrolling
