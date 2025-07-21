@@ -95,49 +95,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Drag functions
-    // function dragStart(e) {
-    //     e.preventDefault(); // Prevent default behavior
-    //     isDragging = true;
-    //     startX = e.pageX || e.touches[0].pageX;
-    // }
-
     function dragStart(e) {
+        e.preventDefault(); // Prevent default behavior
         isDragging = true;
         startX = e.pageX || e.touches[0].pageX;
-        startY = e.pageY || e.touches[0].pageY;
     }
 
-    function drag(e) {
-        if (!isDragging) return;
-
-        const currentX = e.pageX || (e.touches ? e.touches[0].pageX : startX);
-        const currentY = e.pageY || (e.touches ? e.touches[0].pageY : startY);
-        const diffX = currentX - startX;
-        const diffY = currentY - startY;
-
-        // Detect if the gesture is more horizontal than vertical
-        if (Math.abs(diffX) > Math.abs(diffY)) {
-            e.preventDefault(); // Only prevent default if it's a horizontal drag
-
-            const sensitivity = 0.1;
-            const newTheta = theta + diffX * sensitivity;
-            carousel.style.transform = `rotateY(${newTheta}deg)`;
-        }
-    }
+    // function dragStart(e) {
+    //     isDragging = true;
+    //     startX = e.pageX || e.touches[0].pageX;
+    //     startY = e.pageY || e.touches[0].pageY;
+    // }
 
     // function drag(e) {
     //     if (!isDragging) return;
-    //     e.preventDefault(); // Prevent default scrolling
 
     //     const currentX = e.pageX || (e.touches ? e.touches[0].pageX : startX);
+    //     const currentY = e.pageY || (e.touches ? e.touches[0].pageY : startY);
     //     const diffX = currentX - startX;
+    //     const diffY = currentY - startY;
 
-    //     // Rotate based on drag distance - FIXED DIRECTION
-    //     const sensitivity = 0.1;
-    //     const newTheta = theta + diffX * sensitivity;
+    //     // Detect if the gesture is more horizontal than vertical
+    //     if (Math.abs(diffX) > Math.abs(diffY)) {
+    //         e.preventDefault(); // Only prevent default if it's a horizontal drag
 
-    //     carousel.style.transform = `rotateY(${newTheta}deg)`;
+    //         const sensitivity = 0.1;
+    //         const newTheta = theta + diffX * sensitivity;
+    //         carousel.style.transform = `rotateY(${newTheta}deg)`;
+    //     }
     // }
+
+    function drag(e) {
+        if (!isDragging) return;
+        e.preventDefault(); // Prevent default scrolling
+
+        const currentX = e.pageX || (e.touches ? e.touches[0].pageX : startX);
+        const diffX = currentX - startX;
+
+        // Rotate based on drag distance - FIXED DIRECTION
+        const sensitivity = 0.1;
+        const newTheta = theta + diffX * sensitivity;
+
+        carousel.style.transform = `rotateY(${newTheta}deg)`;
+    }
 
     function dragEnd(e) {
         if (!isDragging) return;
