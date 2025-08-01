@@ -124,9 +124,7 @@ h6 {
 
 /* Memory Cards */
 .memory-card {
-    touch-action: manipulation; /* Or auto */
-    -webkit-user-select: none;
-    user-select: none;
+    touch-action: pan-y;
 
     position: absolute;
     width: var(--card-width);
@@ -138,6 +136,8 @@ h6 {
     transform-style: preserve-3d;
     transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
+
+    
 }
 
 .card-inner {
