@@ -186,11 +186,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Resize handler
-    window.addEventListener("resize", () => {
-        radius = window.innerWidth <= 768 ? 250 : 400;
-        arrangeCards();
-        rotateCarousel();
-    });
+    // window.addEventListener("resize", () => {
+    //     radius = window.innerWidth <= 768 ? 250 : 400;
+    //     arrangeCards();
+    //     rotateCarousel();
+    // });
 
     // Initialize the carousel
     init();

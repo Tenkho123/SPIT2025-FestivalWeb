@@ -56,7 +56,7 @@ h6 {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-shadow: 0 0 15px rgba(157, 0, 255, 0.5);
+    /* text-shadow: 0 0 15px rgba(157, 0, 255, 0.5); */
     animation: pulse 3s infinite alternate;
 }
 
@@ -145,7 +145,7 @@ h6 {
 }
 
 .memory-card:hover .card-inner {
-    transform: translateZ(20px);
+    transform: translateZ(10px);
 }
 
 .memory-card.flipped .card-inner {
@@ -160,7 +160,7 @@ h6 {
     backface-visibility: hidden;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
 }
 
 .card-front {
@@ -192,14 +192,14 @@ h6 {
     font-size: 0.8rem;
     color: var(--accent);
     margin-bottom: 10px;
-    text-shadow: 0 0 5px rgba(255, 0, 229, 0.7);
+    /* text-shadow: 0 0 5px rgba(255, 0, 229, 0.7); */
 }
 
 .memory-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: var(--text-primary);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); */
 }
 
 .memory-image {
@@ -218,7 +218,7 @@ h6 {
 .memory-image i {
     color: var(--primary);
     font-size: 4rem;
-    text-shadow: var(--glow-primary);
+    /* text-shadow: var(--glow-primary); */
     animation: pulse 3s infinite alternate;
     z-index: 2;
 }
@@ -238,7 +238,7 @@ h6 {
     z-index: 1;
 }
 
-@keyframes glitch {
+/* @keyframes glitch {
     0% {
         background-position: 0 0;
     }
@@ -258,7 +258,7 @@ h6 {
     100% {
         background-position: 0 0;
     }
-}
+} */
 
 .memory-preview {
     font-size: 0.9rem;
@@ -310,12 +310,12 @@ h6 {
 /* Carousel Controls */
 .carousel-controls {
     position: absolute;
-    bottom: -50px;
+    top: 480px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1100px;
     z-index: 10;
 }
 
@@ -331,7 +331,7 @@ h6 {
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: var(--glow-primary);
+    /* box-shadow: var(--glow-primary); */
 }
 
 .control-btn:hover {
