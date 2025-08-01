@@ -14,7 +14,7 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--slate-700);
 
-    -webkit-overflow-scrolling: touch;
+    /* -webkit-overflow-scrolling: touch; */
 }
 /* end: Globals */
 
