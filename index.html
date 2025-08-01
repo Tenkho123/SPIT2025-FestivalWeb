@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="tailwindcss-colors.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="3dSelectionStyle.css">
+    <link rel="stylesheet" href="loadingscreen.css">
     <title>Chat</title>
 </head>
 
 <body>
+    <div id="loading-screen">
+        <div class="image-stack">
+            <img src="images/LotusFrameBackground.png" class="layer index0" />
+            <img src="images/LotusFrame.png" class="layer index2" />
+            <img src="images/FestivalLogoCircle.png" class="layer spin index1" />
+        </div>
+    </div>
 
     <!-- start: Chat -->
     <section class="chat-section">
@@ -809,7 +817,7 @@
         </div>
     </section>
     <!-- end: Chat -->
-
+    <script src="loadingscreen.js"></script>
     <script src="script.js"></script>
     <script src="3dSelectionScript.js"></script>
 </body>
