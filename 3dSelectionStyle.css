@@ -124,6 +124,10 @@ h6 {
 
 /* Memory Cards */
 .memory-card {
+    touch-action: manipulation; /* Or auto */
+    -webkit-user-select: none;
+    user-select: none;
+
     position: absolute;
     width: var(--card-width);
     height: var(--card-height);
