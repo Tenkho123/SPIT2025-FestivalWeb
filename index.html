@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="tailwindcss-colors.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="3dSelectionStyle.css">
+    <link rel="stylesheet" href="loadingscreen.css">
     <title>Chat</title>
 </head>
 
 <body>
+    <div id="loading-screen">
+        <div class="image-stack">
+            <img src="images/LotusFrameBackground.png" class="layer index0" />
+            <img src="images/LotusFrame.png" class="layer index2" />
+            <img src="images/FestivalLogoCircle.png" class="layer spin index1" />
+        </div>
+    </div>
 
     <!-- start: Chat -->
     <section class="chat-section">
@@ -368,10 +376,12 @@
 
                             <div class="carousel-controls">
                                 <button id="prev-btn" class="control-btn">
-                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <i class="fa-solid fa-chevron-left ri-arrow-left-s-line"></i>
+                                    <!-- <i class="fa-solid fa-chevron-left"></i> -->
                                 </button>
                                 <button id="next-btn" class="control-btn">
-                                    <i class="fa-solid fa-chevron-right"></i>
+                                    <i class="fa-solid fa-chevron-right ri-arrow-right-s-line"></i>
+                                    <!-- <i class="fa-solid fa-chevron-right"></i> -->
                                 </button>
                             </div>
                         </main>
@@ -809,7 +819,7 @@
         </div>
     </section>
     <!-- end: Chat -->
-
+    <script src="loadingscreen.js"></script>
     <script src="script.js"></script>
     <script src="3dSelectionScript.js"></script>
 </body>

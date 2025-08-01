@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let startX, startY;
     let isDragging = false;
     let theta = 0;
-    let radius = window.innerWidth <= 768 ? 250 : 400;
+    // let radius = window.innerWidth <= 768 ? 250 : 400;
+    let radius = 400;
     const totalCards = cards.length;
 
     // Initialize
@@ -186,11 +187,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Resize handler
-    window.addEventListener("resize", () => {
-        radius = window.innerWidth <= 768 ? 250 : 400;
-        arrangeCards();
-        rotateCarousel();
-    });
+    // window.addEventListener("resize", () => {
+    //     radius = window.innerWidth <= 768 ? 250 : 400;
+    //     arrangeCards();
+    //     rotateCarousel();
+    // });
 
     // Initialize the carousel
     init();
