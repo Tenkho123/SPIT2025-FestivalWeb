@@ -1,0 +1,103 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+.flat-card-flat-card-carousel-container {
+    position: relative;
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.flat-card-carousel {
+    /* top: 50%; */
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translateX(-50%);
+    /* transform: translate(-50%, -50%); */
+    
+    position: relative;
+    width: 100%;
+    /* chỉ chiếm nửa bên trái */
+    height: 650px;
+    perspective: 1000px;
+    overflow: hidden;
+    /* không cho ảnh vượt ra ngoài */
+}
+
+.flat-card-carousel img {
+    background: green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 400px;
+    height: 550px;
+    transform-style: preserve-3d;
+    
+    transition: all 0.6s ease;
+    border-radius: 15px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+/* Chú thích bên phải */
+.caption {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.caption-text {
+    flex-direction: column;
+    text-align: center;
+}
+
+.caption-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.caption-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.controls button {
+    padding: 0px 45px;
+    border: none;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background: #ff4b4b;
+}

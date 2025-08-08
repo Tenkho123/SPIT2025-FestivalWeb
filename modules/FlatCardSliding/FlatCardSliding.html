@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Image Carousel Fixed</title>
+  <link rel="stylesheet" href="FlatCardSliding.css">
+</head>
+
+<body>
+
+  <div class="carousel-container">
+    <div class="carousel" id="carousel">
+      <img src=".//R(4).jpg" data-title="Ảnh 1" data-desc="Mô tả chi tiết cho ảnh 1" width="220" height="320">
+      <img src=".//R(4).jpg" data-title="Ảnh 2" data-desc="Mô tả chi tiết cho ảnh 2" width="220" height="320">
+      <img src=".//R(4).jpg" data-title="Ảnh 3" data-desc="Mô tả chi tiết cho ảnh 3" width="220" height="320">
+      <img src=".//R(4).jpg" data-title="Ảnh 4" data-desc="Mô tả chi tiết cho ảnh 4" width="220" height="320">
+      <img src=".//R(4).jpg" data-title="Ảnh 5" data-desc="Mô tả chi tiết cho ảnh 5" width="220" height="320">
+    </div>
+    <div class="caption">
+      <h2 id="title">Ảnh 1</h2>
+      <p id="desc">Mô tả chi tiết cho ảnh 1</p>
+      <div class="controls">
+        <button onclick="prev()">Prev</button>
+        <button onclick="next()">Next</button>
+      </div>
+    </div>
+  </div>
+  <script src="FlatCardSliding.js"></script>
+</body>
+
+</html>

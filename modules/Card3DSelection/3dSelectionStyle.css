@@ -104,12 +104,15 @@ h6 {
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 850px;
     perspective: 1000px;
     transform-style: preserve-3d;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transform: scale(0.8); /* 80% size */
+    transform-origin: center center; /* scale from center */
     /* touch-action: none; */
     /* Prevent default touch actions */
 }
@@ -312,7 +315,7 @@ h6 {
 /* Carousel Controls */
 .carousel-controls {
     position: absolute;
-    top: 480px;
+    top: 48%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;

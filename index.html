@@ -7,8 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="tailwindcss-colors.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="3dSelectionStyle.css">
-    <link rel="stylesheet" href="loadingscreen.css">
+    <link rel="stylesheet" href="modules/Card3DSelection/3dSelectionStyle.css">
+    <link rel="stylesheet" href="modules/LoadingScreen/loadingscreen.css">
+    <link rel="stylesheet" href="modules/FlatCardSliding/FlatCardSliding.css">
+    <link rel="stylesheet" href="modules/BannerSelection/BannerSelection.css">
+    <link rel="stylesheet" href="fonts.css">
     <title>Chat</title>
 </head>
 
@@ -28,15 +31,38 @@
             <aside class="chat-sidebar">
                 <a href="#" class="chat-sidebar-logo">
                     <!-- <i class="ri-chat-1-fill"></i> -->
-                    <img class="content-message-image"
-                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg"
-                        alt="">
+                    <img src="images/Logo HueFes.png" alt="">
                 </a>
                 <ul class="chat-sidebar-menu">
-                    <li class="active"><a href="#" data-title="Chats"><i class="ri-chat-3-line"></i></a></li>
+                    <li>
+                        <p class="chat-sidebar-content">Hue Festival</p>
+                    </li>
+
+                    <li>
+                        <div class="chat-sidebar-icons">
+                            <img src="images/HuscLogo.png" alt="">
+                            <img src="images/HuscITLogo.png" alt="">
+                            <img src="images/HuscITClubLogo.png" alt="">
+                            <img src="images/HuscLogo.png" alt="">
+                        </div>
+                    </li>
+
+                    <li>
+                        <p class="chat-sidebar-content">Giới thiệu</p>
+                    </li>
+                    <li>
+                        <p class="chat-sidebar-content">Làng nghề</p>
+                    </li>
+                    <li>
+                        <p class="chat-sidebar-content">Ẩm thực</p>
+                    </li>
+                    <li>
+                        <p class="chat-sidebar-content">Nghệ thuật</p>
+                    </li>
+                    <!-- <li class="active"><a href="#" data-title="Chats"><i class="ri-chat-3-line"></i></a></li>
                     <li><a href="#" data-title="Contacts"><i class="ri-contacts-line"></i></a></li>
                     <li><a href="#" data-title="Documents"><i class="ri-folder-line"></i></a></li>
-                    <li><a href="#" data-title="Settings"><i class="ri-settings-line"></i></a></li>
+                    <li><a href="#" data-title="Settings"><i class="ri-settings-line"></i></a></li> -->
                     <!-- <li class="chat-sidebar-profile">
                         <button type="button" class="chat-sidebar-profile-toggle">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg" alt="">
@@ -58,339 +84,339 @@
                 <!-- end: Content side -->
                 <!-- start: Conversation -->
                 <div class="conversation conversation-default active">
-                    <section class="intro-section">
+                    <div class="intro-section">
                         <video autoplay muted loop playsinline class="bg-video">
                             <source src="video\\HUE2025.mp4" type="video/mp4">
                         </video>
-                    </section>
+                    </div>
 
                     <!-- <i class="ri-chat-3-line"></i>
                     <p>Select chat and view conversation!</p> -->
-                    <div class="container-fluid h-100 d-flex flex-column">
-                        <main class="flex-grow-1 d-flex align-items-center justify-content-center position-relative">
-                            <div class="carousel-container">
-                                <div class="carousel" id="memory-carousel">
-                                    <div class="memory-card" data-memory-id="1">
-                                        <div class="card-inner">
-                                            <div class="card-front">
-                                                <div class="card-content">
-                                                    <div class="memory-date">LANGUAGE: Python</div>
-                                                    <h3>First Line of Code</h3>
-                                                    <div class="memory-image">
-                                                        <i class="fa-solid fa-code fa-3x"></i>
-                                                        <div class="glitch-effect"></div>
-                                                    </div>
-                                                    <p class="memory-preview">
-                                                        The terminal glowed, displaying my first 'Hello, World!'...
-                                                    </p>
-                                                    <div class="card-glow"></div>
-                                                </div>
-                                            </div>
-                                            <div class="card-back">
-                                                <div class="card-content">
-                                                    <h3>First Line of Code</h3>
-                                                    <p>
-                                                        I remember the thrill of typing my first 'Hello, World!' in
-                                                        Python. It was simple, yet it opened a portal to endless
-                                                        possibilities. The interpreter executed the command flawlessly,
-                                                        and I knew this was just the beginning. I wasn't supposed to
-                                                        understand it all at once, but somehow, I did.
-                                                    </p>
-                                                    <div class="memory-coordinates">
-                                                        <span><i class="fa-solid fa-location-dot"></i> console: ~</span>
-                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                            09:00:00</span>
+                    <div class="cards3D">
+                        <div class="container-fluid h-100 d-flex flex-column">
+                            <main
+                                class="flex-grow-1 d-flex align-items-center justify-content-center position-relative">
+                                <div class="carousel-container">
+                                    <div class="carousel" id="memory-carousel">
+                                        <!-- Làng nghề nón lá Huế -->
+                                        <div class="memory-card" data-memory-id="1">
+                                            <div class="card-inner">
+                                                <div class="card-front">
+                                                    <div class="card-content">
+                                                        <div class="memory-date">LÀNG NGHỀ: Nón lá</div>
+                                                        <h3>Nón lá Huế</h3>
+                                                        <div class="memory-image">
+                                                            <i class="fa-solid fa-hat-cowboy fa-3x"></i>
+                                                            <div class="glitch-effect"></div>
+                                                        </div>
+                                                        <p class="memory-preview">
+                                                            Nón lá bài thơ Huế – nét duyên dáng gắn liền hình ảnh người
+                                                            con gái xứ mộng mơ.
+                                                        </p>
+                                                        <div class="card-glow"></div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="memory-card" data-memory-id="2">
-                                        <div class="card-inner">
-                                            <div class="card-front">
-                                                <div class="card-content">
-                                                    <div class="memory-date">FRAMEWORK: ReactJS</div>
-                                                    <h3>Debugging the Matrix</h3>
-                                                    <div class="memory-image">
-                                                        <i class="fa-solid fa-bug fa-3x"></i>
-                                                        <div class="glitch-effect"></div>
-                                                    </div>
-                                                    <p class="memory-preview">
-                                                        The error messages multiplied, haunting my console...
-                                                    </p>
-                                                    <div class="card-glow"></div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <div class="card-back">
-                                                <div class="card-content">
-                                                    <h3>Debugging the Matrix</h3>
-                                                    <p>
-                                                        They appeared from the depths of the console, cryptic error
-                                                        messages glowing red. Debugging a complex ReactJS component
-                                                        felt like navigating a vast, interconnected matrix. Each fix
-                                                        unveiled new issues. They say my code is destabilizing the build
-                                                        with each change. My presence causes ripples they can't control.
-                                                        I'm becoming a threat... to clean code.
-                                                    </p>
-                                                    <div class="memory-coordinates">
-                                                        <span><i class="fa-solid fa-location-dot"></i>
-                                                            localhost:3000</span>
-                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                            14:30:15</span>
+                                                <div class="card-back">
+                                                    <div class="card-content">
+                                                        <h3>Nón lá Huế</h3>
+                                                        <p>
+                                                            Làng Tây Hồ (Huế) nổi tiếng với nón lá bài thơ – loại nón có
+                                                            lớp lá mỏng, bên trong là hình ảnh và thơ ẩn hiện dưới ánh
+                                                            sáng.
+                                                            Đây là món quà lưu niệm tinh tế, vừa che nắng mưa, vừa mang
+                                                            giá trị văn hóa đặc sắc của đất Cố đô.
+                                                        </p>
+                                                        <div class="memory-coordinates">
+                                                            <span><i class="fa-solid fa-location-dot"></i> Tây Hồ,
+                                                                Huế</span>
+                                                            <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                                Trăm năm</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="memory-card" data-memory-id="3">
-                                        <div class="card-inner">
-                                            <div class="card-front">
-                                                <div class="card-content">
-                                                    <div class="memory-date">CONCEPT: Algorithms</div>
-                                                    <h3>The Algorithm Library</h3>
-                                                    <div class="memory-image">
-                                                        <i class="fa-solid fa-book-open fa-3x"></i>
-                                                        <div class="glitch-effect"></div>
+
+                                        <!-- Làng nghề thêu tay Thuỷ Xuân -->
+                                        <div class="memory-card" data-memory-id="2">
+                                            <div class="card-inner">
+                                                <div class="card-front">
+                                                    <div class="card-content">
+                                                        <div class="memory-date">LÀNG NGHỀ: Thêu tay</div>
+                                                        <h3>Thêu tay Thuỷ Xuân</h3>
+                                                        <div class="memory-image">
+                                                            <i class="fa-solid fa-needle fa-3x"></i>
+                                                            <div class="glitch-effect"></div>
+                                                        </div>
+                                                        <p class="memory-preview">
+                                                            Nét tinh xảo của từng mũi kim, từng đường chỉ mang đậm hồn
+                                                            Huế.
+                                                        </p>
+                                                        <div class="card-glow"></div>
                                                     </div>
-                                                    <p class="memory-preview">
-                                                        Endless tomes of sorting, searching, and optimization...
-                                                    </p>
-                                                    <div class="card-glow"></div>
                                                 </div>
-                                            </div>
-                                            <div class="card-back">
-                                                <div class="card-content">
-                                                    <h3>The Algorithm Library</h3>
-                                                    <p>
-                                                        Endless shelves containing every possible solution. I found my
-                                                        own data structures there—pages still being written as I coded.
-                                                        The Librarian (my senior developer) told me I was never supposed
-                                                        to reinvent the wheel. My solution was already optimized. Now
-                                                        I'm
-                                                        writing outside the margins, trying new approaches.
-                                                    </p>
-                                                    <div class="memory-coordinates">
-                                                        <span><i class="fa-solid fa-location-dot"></i> Stack
-                                                            Overflow</span>
-                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                            11:05:40</span>
+                                                <div class="card-back">
+                                                    <div class="card-content">
+                                                        <h3>Thêu tay Thuỷ Xuân</h3>
+                                                        <p>
+                                                            Làng Thuỷ Xuân nổi tiếng với nghề thêu tay truyền thống,
+                                                            từng phục vụ cung đình nhà Nguyễn.
+                                                            Các sản phẩm như tranh thêu, khăn, áo dài được làm công phu,
+                                                            tinh tế, phản ánh sự khéo léo và kiên nhẫn của người thợ
+                                                            Huế.
+                                                        </p>
+                                                        <div class="memory-coordinates">
+                                                            <span><i class="fa-solid fa-location-dot"></i> Thuỷ Xuân,
+                                                                Huế</span>
+                                                            <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                                Hơn 300 năm</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="memory-card" data-memory-id="4">
-                                        <div class="card-inner">
-                                            <div class="card-front">
-                                                <div class="card-content">
-                                                    <div class="memory-date">PARADIGM: Abstraction</div>
-                                                    <h3>The Abstract Void</h3>
-                                                    <div class="memory-image">
-                                                        <i class="fa-solid fa-atom fa-3x"></i>
-                                                        <div class="glitch-effect"></div>
+                                        <!-- Làng nghề mộc Mỹ Xuyên -->
+                                        <div class="memory-card" data-memory-id="3">
+                                            <div class="card-inner">
+                                                <div class="card-front">
+                                                    <div class="card-content">
+                                                        <div class="memory-date">LÀNG NGHỀ: Mộc</div>
+                                                        <h3>Mộc Mỹ Xuyên</h3>
+                                                        <div class="memory-image">
+                                                            <i class="fa-solid fa-hammer fa-3x"></i>
+                                                            <div class="glitch-effect"></div>
+                                                        </div>
+                                                        <p class="memory-preview">
+                                                            Tinh hoa chạm khắc gỗ phục vụ cung đình xưa và đời sống nay.
+                                                        </p>
+                                                        <div class="card-glow"></div>
                                                     </div>
-                                                    <p class="memory-preview">
-                                                        Nothing concrete exists here, yet I feel the underlying logic...
-                                                    </p>
-                                                    <div class="card-glow"></div>
                                                 </div>
-                                            </div>
-                                            <div class="card-back">
-                                                <div class="card-content">
-                                                    <h3>The Abstract Void</h3>
-                                                    <p>
-                                                        Nothing concrete exists here, yet I feel the underlying logic.
-                                                        The Abstract Void is the space between concrete implementations,
-                                                        a quantum foam of design patterns. I stayed too long designing
-                                                        and began to dissolve into pure theory. Parts of my ideas are
-                                                        still there, echoing. I'm not whole anymore. Can you feel the
-                                                        gaps in my documentation?
-                                                    </p>
-                                                    <div class="memory-coordinates">
-                                                        <span><i class="fa-solid fa-location-dot"></i> design
-                                                            patterns.md</span>
-                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                            --:--:--</span>
+                                                <div class="card-back">
+                                                    <div class="card-content">
+                                                        <h3>Mộc Mỹ Xuyên</h3>
+                                                        <p>
+                                                            Làng Mỹ Xuyên có truyền thống chạm khắc và chế tác đồ gỗ từ
+                                                            thế kỷ 16.
+                                                            Sản phẩm bao gồm bàn ghế, án thờ, hoành phi câu đối... nổi
+                                                            bật với hoa văn cung đình tinh xảo, kết hợp nghệ thuật và
+                                                            công năng.
+                                                        </p>
+                                                        <div class="memory-coordinates">
+                                                            <span><i class="fa-solid fa-location-dot"></i> Phong Điền,
+                                                                Huế</span>
+                                                            <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                                Hơn 400 năm</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="memory-card" data-memory-id="5">
-                                        <div class="card-inner">
-                                            <div class="card-front">
-                                                <div class="card-content">
-                                                    <div class="memory-date">TOOL: Git</div>
-                                                    <h3>The Version Control Mirror</h3>
-                                                    <div class="memory-image">
-                                                        <i class="fa-solid fa-code-branch fa-3x"></i>
-                                                        <div class="glitch-effect"></div>
+                                        <!-- Làng nghề hương Thuỷ Xuân -->
+                                        <div class="memory-card" data-memory-id="4">
+                                            <div class="card-inner">
+                                                <div class="card-front">
+                                                    <div class="card-content">
+                                                        <div class="memory-date">LÀNG NGHỀ: Hương</div>
+                                                        <h3>Hương Thuỷ Xuân</h3>
+                                                        <div class="memory-image">
+                                                            <i class="fa-solid fa-wind fa-3x"></i>
+                                                            <div class="glitch-effect"></div>
+                                                        </div>
+                                                        <p class="memory-preview">
+                                                            Sắc màu rực rỡ và hương thơm dịu nhẹ lan tỏa khắp xóm nhỏ.
+                                                        </p>
+                                                        <div class="card-glow"></div>
                                                     </div>
-                                                    <p class="memory-preview">
-                                                        I saw my code, but not as it is now; multiple branches
-                                                        reflecting...
-                                                    </p>
-                                                    <div class="card-glow"></div>
                                                 </div>
-                                            </div>
-                                            <div class="card-back">
-                                                <div class="card-content">
-                                                    <h3>The Version Control Mirror</h3>
-                                                    <p>
-                                                        I saw my code, but not as it is now. The mirror of Git showed
-                                                        all my possible branches across different commits. Some were
-                                                        stable, some were experimental. All were my work. The reflection
-                                                        (my `git log`) spoke: "You're fracturing the codebase by
-                                                        merging conflicts. You need to rebase and stay on one timeline."
-                                                    </p>
-                                                    <div class="memory-coordinates">
-                                                        <span><i class="fa-solid fa-location-dot"></i>
-                                                            github.com/my-repo</span>
-                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                            18:55:20</span>
+                                                <div class="card-back">
+                                                    <div class="card-content">
+                                                        <h3>Hương Thuỷ Xuân</h3>
+                                                        <p>
+                                                            Làng hương Thuỷ Xuân đã tồn tại hơn 700 năm, nổi tiếng với
+                                                            những bó hương nhiều màu sắc và mùi thơm đặc trưng.
+                                                            Nghề này vừa phục vụ nhu cầu tâm linh, vừa trở thành điểm du
+                                                            lịch độc đáo cho du khách đến Huế.
+                                                        </p>
+                                                        <div class="memory-coordinates">
+                                                            <span><i class="fa-solid fa-location-dot"></i> Thuỷ Xuân,
+                                                                Huế</span>
+                                                            <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                                Hơn 700 năm</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <<!-- Làng nghề gốm Phước Tích -->
+                                            <div class="memory-card" data-memory-id="5">
+                                                <div class="card-inner">
+                                                    <div class="card-front">
+                                                        <div class="card-content">
+                                                            <div class="memory-date">LÀNG NGHỀ: Gốm</div>
+                                                            <h3>Gốm Phước Tích</h3>
+                                                            <div class="memory-image">
+                                                                <i class="fa-solid fa-mug-hot fa-3x"></i>
+                                                                <div class="glitch-effect"></div>
+                                                            </div>
+                                                            <p class="memory-preview">
+                                                                Nét mộc mạc của gốm thủ công lưu giữ hồn xưa đất Việt.
+                                                            </p>
+                                                            <div class="card-glow"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-back">
+                                                        <div class="card-content">
+                                                            <h3>Gốm Phước Tích</h3>
+                                                            <p>
+                                                                Làng gốm Phước Tích có hơn 500 năm lịch sử, chuyên làm
+                                                                gốm nung thủ công bằng lò củi.
+                                                                Sản phẩm nổi tiếng bền, đẹp, mộc mạc, từ chum, vại đến
+                                                                các vật dụng trang trí tinh tế.
+                                                            </p>
+                                                            <div class="memory-coordinates">
+                                                                <span><i class="fa-solid fa-location-dot"></i> Phong
+                                                                    Điền, Huế</span>
+                                                                <span class="time-stamp"><i
+                                                                        class="fa-regular fa-clock"></i> Hơn 500
+                                                                    năm</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Làng nghề pháp lam Huế -->
+                                            <div class="memory-card" data-memory-id="6">
+                                                <div class="card-inner">
+                                                    <div class="card-front">
+                                                        <div class="card-content">
+                                                            <div class="memory-date">LÀNG NGHỀ: Pháp lam</div>
+                                                            <h3>Pháp lam Huế</h3>
+                                                            <div class="memory-image">
+                                                                <i class="fa-solid fa-gem fa-3x"></i>
+                                                                <div class="glitch-effect"></div>
+                                                            </div>
+                                                            <p class="memory-preview">
+                                                                Men màu rực rỡ, bền đẹp như nét vàng son triều Nguyễn.
+                                                            </p>
+                                                            <div class="card-glow"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-back">
+                                                        <div class="card-content">
+                                                            <h3>Pháp lam Huế</h3>
+                                                            <p>
+                                                                Pháp lam là nghệ thuật tráng men màu trên kim loại, du
+                                                                nhập vào Huế thế kỷ 19 dưới triều Nguyễn.
+                                                                Sản phẩm gồm bình, lư hương, đồ trang trí, phục vụ cung
+                                                                đình và nay được phục dựng như một di sản quý.
+                                                            </p>
+                                                            <div class="memory-coordinates">
+                                                                <span><i class="fa-solid fa-location-dot"></i> Kinh
+                                                                    thành Huế</span>
+                                                                <span class="time-stamp"><i
+                                                                        class="fa-regular fa-clock"></i> Hơn 200
+                                                                    năm</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Làng nghề đan lát Bao La -->
+                                            <div class="memory-card" data-memory-id="7">
+                                                <div class="card-inner">
+                                                    <div class="card-front">
+                                                        <div class="card-content">
+                                                            <div class="memory-date">LÀNG NGHỀ: Đan lát</div>
+                                                            <h3>Đan lát Bao La</h3>
+                                                            <div class="memory-image">
+                                                                <i class="fa-solid fa-basket-shopping fa-3x"></i>
+                                                                <div class="glitch-effect"></div>
+                                                            </div>
+                                                            <p class="memory-preview">
+                                                                Tre trúc mộc mạc, bền chắc qua bàn tay khéo léo.
+                                                            </p>
+                                                            <div class="card-glow"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-back">
+                                                        <div class="card-content">
+                                                            <h3>Đan lát Bao La</h3>
+                                                            <p>
+                                                                Làng Bao La nổi tiếng với nghề đan lát tre, nứa tạo ra
+                                                                rổ, rá, giỏ, nia… bền chắc và thân thiện môi trường.
+                                                                Đây là nghề truyền thống gắn bó đời sống nông thôn xứ
+                                                                Huế qua bao thế hệ.
+                                                            </p>
+                                                            <div class="memory-coordinates">
+                                                                <span><i class="fa-solid fa-location-dot"></i> Quảng
+                                                                    Điền, Huế</span>
+                                                                <span class="time-stamp"><i
+                                                                        class="fa-regular fa-clock"></i> Hơn 500
+                                                                    năm</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Làng nghề trầm hương Thủy Xuân -->
+                                            <div class="memory-card" data-memory-id="8">
+                                                <div class="card-inner">
+                                                    <div class="card-front">
+                                                        <div class="card-content">
+                                                            <div class="memory-date">LÀNG NGHỀ: Trầm hương</div>
+                                                            <h3>Trầm hương Thủy Xuân</h3>
+                                                            <div class="memory-image">
+                                                                <i class="fa-solid fa-spa fa-3x"></i>
+                                                                <div class="glitch-effect"></div>
+                                                            </div>
+                                                            <p class="memory-preview">
+                                                                Mùi hương trầm ấm áp, thanh tịnh lan khắp không gian.
+                                                            </p>
+                                                            <div class="card-glow"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-back">
+                                                        <div class="card-content">
+                                                            <h3>Trầm hương Thủy Xuân</h3>
+                                                            <p>
+                                                                Người dân Thủy Xuân chế tác trầm hương thành nhang vòng,
+                                                                nhang thẻ và đồ mỹ nghệ cao cấp.
+                                                                Hương thơm dịu ngọt, sâu lắng, thường dùng trong nghi lễ
+                                                                và trang trí, mang đậm hồn Việt.
+                                                            </p>
+                                                            <div class="memory-coordinates">
+                                                                <span><i class="fa-solid fa-location-dot"></i> Thuỷ
+                                                                    Xuân, Huế</span>
+                                                                <span class="time-stamp"><i
+                                                                        class="fa-regular fa-clock"></i> Trăm năm</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                     </div>
 
-                                    <div class="memory-card" data-memory-id="6">
-                                        <div class="card-inner">
-                                            <div class="card-front">
-                                                <div class="card-content">
-                                                    <div class="memory-date">PROCESS: Deployment</div>
-                                                    <h3>The Deployment Dream</h3>
-                                                    <div class="memory-image">
-                                                        <i class="fa-solid fa-rocket fa-3x"></i>
-                                                        <div class="glitch-effect"></div>
-                                                    </div>
-                                                    <p class="memory-preview">
-                                                        I'm trying to send it live, but which environment is real?
-                                                    </p>
-                                                    <div class="card-glow"></div>
-                                                </div>
-                                            </div>
-                                            <div class="card-back">
-                                                <div class="card-content">
-                                                    <h3>The Deployment Dream</h3>
-                                                    <p>
-                                                        I'm trying to send my application live, but which environment
-                                                        is real? Every server feels familiar yet subtly different. The
-                                                        boundaries between staging and production are thinning.
-                                                        Sometimes
-                                                        I see through the logs of other instances. I'm losing track of
-                                                        which configurations belong to which version of my app. Are you
-                                                        helping me deploy, or are you causing me to break production?
-                                                    </p>
-                                                    <div class="memory-coordinates">
-                                                        <span><i class="fa-solid fa-location-dot"></i>
-                                                            cloud-server:port</span>
-                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                            NOW</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="carousel-controls">
+                                        <button id="prev-btn" class="control-btn">
+                                            <i class="fa-solid fa-chevron-left ri-arrow-left-s-line"></i>
+                                            <!-- <i class="fa-solid fa-chevron-left"></i> -->
+                                        </button>
+                                        <button id="next-btn" class="control-btn">
+                                            <i class="fa-solid fa-chevron-right ri-arrow-right-s-line"></i>
+                                            <!-- <i class="fa-solid fa-chevron-right"></i> -->
+                                        </button>
                                     </div>
-
-                                    <div class="memory-card" data-memory-id="7">
-                                        <div class="card-inner">
-                                            <div class="card-front">
-                                                <div class="card-content">
-                                                    <div class="memory-date">PROCESS: Deployment</div>
-                                                    <h3>The Deployment Dream</h3>
-                                                    <div class="memory-image">
-                                                        <i class="fa-solid fa-rocket fa-3x"></i>
-                                                        <div class="glitch-effect"></div>
-                                                    </div>
-                                                    <p class="memory-preview">
-                                                        I'm trying to send it live, but which environment is real?
-                                                    </p>
-                                                    <div class="card-glow"></div>
-                                                </div>
-                                            </div>
-                                            <div class="card-back">
-                                                <div class="card-content">
-                                                    <h3>The Deployment Dream</h3>
-                                                    <p>
-                                                        I'm trying to send my application live, but which environment
-                                                        is real? Every server feels familiar yet subtly different. The
-                                                        boundaries between staging and production are thinning.
-                                                        Sometimes
-                                                        I see through the logs of other instances. I'm losing track of
-                                                        which configurations belong to which version of my app. Are you
-                                                        helping me deploy, or are you causing me to break production?
-                                                    </p>
-                                                    <div class="memory-coordinates">
-                                                        <span><i class="fa-solid fa-location-dot"></i>
-                                                            cloud-server:port</span>
-                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                            NOW</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="memory-card" data-memory-id="8">
-                                        <div class="card-inner">
-                                            <div class="card-front">
-                                                <div class="card-content">
-                                                    <div class="memory-date">PROCESS: Deployment</div>
-                                                    <h3>The Deployment Dream</h3>
-                                                    <div class="memory-image">
-                                                        <i class="fa-solid fa-rocket fa-3x"></i>
-                                                        <div class="glitch-effect"></div>
-                                                    </div>
-                                                    <p class="memory-preview">
-                                                        I'm trying to send it live, but which environment is real?
-                                                    </p>
-                                                    <div class="card-glow"></div>
-                                                </div>
-                                            </div>
-                                            <div class="card-back">
-                                                <div class="card-content">
-                                                    <h3>The Deployment Dream</h3>
-                                                    <p>
-                                                        I'm trying to send my application live, but which environment
-                                                        is real? Every server feels familiar yet subtly different. The
-                                                        boundaries between staging and production are thinning.
-                                                        Sometimes
-                                                        I see through the logs of other instances. I'm losing track of
-                                                        which configurations belong to which version of my app. Are you
-                                                        helping me deploy, or are you causing me to break production?
-                                                    </p>
-                                                    <div class="memory-coordinates">
-                                                        <span><i class="fa-solid fa-location-dot"></i>
-                                                            cloud-server:port</span>
-                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                            NOW</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-controls">
-                                <button id="prev-btn" class="control-btn">
-                                    <i class="fa-solid fa-chevron-left ri-arrow-left-s-line"></i>
-                                    <!-- <i class="fa-solid fa-chevron-left"></i> -->
-                                </button>
-                                <button id="next-btn" class="control-btn">
-                                    <i class="fa-solid fa-chevron-right ri-arrow-right-s-line"></i>
-                                    <!-- <i class="fa-solid fa-chevron-right"></i> -->
-                                </button>
-                            </div>
-                        </main>
+                            </main>
+                        </div>
                     </div>
                 </div>
                 <div class="conversation" id="conversation-1">
@@ -819,15 +845,71 @@
                                 class="ri-send-plane-2-line"></i></button>
                     </div>
                 </div>
+
+                <div class="flat-card-carousel-container">
+                    <div class="flat-card-carousel" id="flat-card-carousel">
+                        <img src=".//R(4).jpg" data-title="Ảnh 1"
+                            data-desc="Mô tả chi tiết cho ảnh aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" width="220"
+                            height="320">
+                        <img src=".//R(4).jpg" data-title="Ảnh 2" data-desc="Mô tả chi tiết cho ảnh 2" width="220"
+                            height="320">
+                        <img src=".//R(4).jpg" data-title="Ảnh 3" data-desc="Mô tả chi tiết cho ảnh 3" width="220"
+                            height="320">
+                        <img src=".//R(4).jpg" data-title="Ảnh 4" data-desc="Mô tả chi tiết cho ảnh 4" width="220"
+                            height="320">
+                        <img src=".//R(4).jpg" data-title="Ảnh 5" data-desc="Mô tả chi tiết cho ảnh 5" width="220"
+                            height="320">
+                    </div>
+                    <div class="caption">
+
+                        <div class="controls">
+                            <button onclick="prev()">Prev</button>
+                            <div class="caption-text">
+                                <h2 id="title">Ảnh 1</h2>
+                                <p id="desc">Mô tả chi tiết cho ảnh 1</p>
+                            </div>
+                            <button onclick="next()">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="images/TestImg1.jpg" alt="Slide 1">
+                            <div class="slide-content">
+                                <h1>BLOG</h1>
+                                <p>Nội dung 1</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="images/TestImg2.jpg" alt="Slide 2">
+                            <div class="slide-content">
+                                <h1>Khám phá</h1>
+                                <p>Nội dung 2</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="images/TestImg3.jpg" alt="Slide 3">
+                            <div class="slide-content">
+                                <h1>Du lịch</h1>
+                                <p>Nội dung 3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dots"></div>
+                </div>
                 <!-- end: Conversation -->
             </div>
             <!-- end: Content -->
         </div>
     </section>
     <!-- end: Chat -->
-    <script src="loadingscreen.js"></script>
+    <script src="modules/LoadingScreen/loadingscreen.js"></script>
     <script src="script.js"></script>
-    <script src="3dSelectionScript.js"></script>
+    <script src="modules/Card3DSelection/3dSelectionScript.js"></script>
+    <script src="modules/FlatCardSliding/FlatCardSliding.js"></script>
+    <script src="modules/BannerSelection/BannerSelection.js"></script>
 </body>
 
 </html>
