@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="tailwindcss-colors.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="3dSelectionStyle.css">
+    <link rel="stylesheet" href="loadingscreen.css">
     <title>Chat</title>
 </head>
+
 <body>
+    <div id="loading-screen">
+        <div class="image-stack">
+            <img src="images/LotusFrameBackground.png" class="layer index0" />
+            <img src="images/LotusFrame.png" class="layer index2" />
+            <img src="images/FestivalLogoCircle.png" class="layer spin index1" />
+        </div>
+    </div>
 
     <!-- start: Chat -->
     <section class="chat-section">
@@ -17,7 +28,9 @@
             <aside class="chat-sidebar">
                 <a href="#" class="chat-sidebar-logo">
                     <!-- <i class="ri-chat-1-fill"></i> -->
-                    <img class="content-message-image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg" alt="">
+                    <img class="content-message-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg"
+                        alt="">
                 </a>
                 <ul class="chat-sidebar-menu">
                     <li class="active"><a href="#" data-title="Chats"><i class="ri-chat-3-line"></i></a></li>
@@ -40,64 +53,353 @@
             <div class="chat-content">
                 <!-- start: Content side -->
                 <div class="content-sidebar">
-                    <div class="content-sidebar-title"><img class="content-message-image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg" alt=""></div>
-                    
-                     <!-- <ul class="content-messages-option">
-                        <li>
-                            <a href="#" id="create-new-chat">
-                                <i class="ri-chat-new-line"></i>
-                                <p>Tạo mới hội thoại</p>
-                            </a>
-                        </li>
-                        <li><a href="#"><i class="ri-phone-find-line"></i><p>Tìm kiếm hội thoại</p></a></li>
-                    </ul> -->
 
-                    <!-- <form action="" class="content-sidebar-form">
-                        <input type="search" class="content-sidebar-input" placeholder="Search...">
-                        <button type="submit" class="content-sidebar-submit"><i class="ri-search-line"></i></button>
-                    </form> -->
-                    <div class="content-messages">
-                        <ul class="content-messages-list">
-                            <li class="content-message-title"><span>Chats</span></li>
-                            <li>
-                                <a href="#" data-conversation="#conversation-1">
-                                    <img class="content-message-image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg" alt="">
-                                    <span class="content-message-info">
-                                        <span class="content-message-name">HuscGPT</span>
-                                        <span class="content-message-text">This is a test message.</span>
-                                    </span>
-                                    <span class="content-message-more">
-                                        <span class="content-message-unread">5</span>
-                                        <span class="content-message-time">12:30</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" data-conversation="#conversation-2">
-                                    <img class="content-message-image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg" alt="">
-                                    <span class="content-message-info">
-                                        <span class="content-message-name">HuscGPT</span>
-                                        <span class="content-message-text">This is a test message.</span>
-                                    </span>
-                                    <span class="content-message-more">
-                                        <span class="content-message-time">12:30</span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
                 <!-- end: Content side -->
                 <!-- start: Conversation -->
                 <div class="conversation conversation-default active">
-                    <i class="ri-chat-3-line"></i>
-                    <p>Select chat and view conversation!</p>
+                    <section class="intro-section">
+                        <video autoplay muted loop playsinline class="bg-video">
+                            <source src="video\\HUE2025.mp4" type="video/mp4">
+                        </video>
+                    </section>
+
+                    <!-- <i class="ri-chat-3-line"></i>
+                    <p>Select chat and view conversation!</p> -->
+                    <div class="container-fluid h-100 d-flex flex-column">
+                        <main class="flex-grow-1 d-flex align-items-center justify-content-center position-relative">
+                            <div class="carousel-container">
+                                <div class="carousel" id="memory-carousel">
+                                    <div class="memory-card" data-memory-id="1">
+                                        <div class="card-inner">
+                                            <div class="card-front">
+                                                <div class="card-content">
+                                                    <div class="memory-date">LANGUAGE: Python</div>
+                                                    <h3>First Line of Code</h3>
+                                                    <div class="memory-image">
+                                                        <i class="fa-solid fa-code fa-3x"></i>
+                                                        <div class="glitch-effect"></div>
+                                                    </div>
+                                                    <p class="memory-preview">
+                                                        The terminal glowed, displaying my first 'Hello, World!'...
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+                                            <div class="card-back">
+                                                <div class="card-content">
+                                                    <h3>First Line of Code</h3>
+                                                    <p>
+                                                        I remember the thrill of typing my first 'Hello, World!' in
+                                                        Python. It was simple, yet it opened a portal to endless
+                                                        possibilities. The interpreter executed the command flawlessly,
+                                                        and I knew this was just the beginning. I wasn't supposed to
+                                                        understand it all at once, but somehow, I did.
+                                                    </p>
+                                                    <div class="memory-coordinates">
+                                                        <span><i class="fa-solid fa-location-dot"></i> console: ~</span>
+                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                            09:00:00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="memory-card" data-memory-id="2">
+                                        <div class="card-inner">
+                                            <div class="card-front">
+                                                <div class="card-content">
+                                                    <div class="memory-date">FRAMEWORK: ReactJS</div>
+                                                    <h3>Debugging the Matrix</h3>
+                                                    <div class="memory-image">
+                                                        <i class="fa-solid fa-bug fa-3x"></i>
+                                                        <div class="glitch-effect"></div>
+                                                    </div>
+                                                    <p class="memory-preview">
+                                                        The error messages multiplied, haunting my console...
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="card-back">
+                                                <div class="card-content">
+                                                    <h3>Debugging the Matrix</h3>
+                                                    <p>
+                                                        They appeared from the depths of the console, cryptic error
+                                                        messages glowing red. Debugging a complex ReactJS component
+                                                        felt like navigating a vast, interconnected matrix. Each fix
+                                                        unveiled new issues. They say my code is destabilizing the build
+                                                        with each change. My presence causes ripples they can't control.
+                                                        I'm becoming a threat... to clean code.
+                                                    </p>
+                                                    <div class="memory-coordinates">
+                                                        <span><i class="fa-solid fa-location-dot"></i>
+                                                            localhost:3000</span>
+                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                            14:30:15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="memory-card" data-memory-id="3">
+                                        <div class="card-inner">
+                                            <div class="card-front">
+                                                <div class="card-content">
+                                                    <div class="memory-date">CONCEPT: Algorithms</div>
+                                                    <h3>The Algorithm Library</h3>
+                                                    <div class="memory-image">
+                                                        <i class="fa-solid fa-book-open fa-3x"></i>
+                                                        <div class="glitch-effect"></div>
+                                                    </div>
+                                                    <p class="memory-preview">
+                                                        Endless tomes of sorting, searching, and optimization...
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+                                            <div class="card-back">
+                                                <div class="card-content">
+                                                    <h3>The Algorithm Library</h3>
+                                                    <p>
+                                                        Endless shelves containing every possible solution. I found my
+                                                        own data structures there—pages still being written as I coded.
+                                                        The Librarian (my senior developer) told me I was never supposed
+                                                        to reinvent the wheel. My solution was already optimized. Now
+                                                        I'm
+                                                        writing outside the margins, trying new approaches.
+                                                    </p>
+                                                    <div class="memory-coordinates">
+                                                        <span><i class="fa-solid fa-location-dot"></i> Stack
+                                                            Overflow</span>
+                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                            11:05:40</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="memory-card" data-memory-id="4">
+                                        <div class="card-inner">
+                                            <div class="card-front">
+                                                <div class="card-content">
+                                                    <div class="memory-date">PARADIGM: Abstraction</div>
+                                                    <h3>The Abstract Void</h3>
+                                                    <div class="memory-image">
+                                                        <i class="fa-solid fa-atom fa-3x"></i>
+                                                        <div class="glitch-effect"></div>
+                                                    </div>
+                                                    <p class="memory-preview">
+                                                        Nothing concrete exists here, yet I feel the underlying logic...
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+                                            <div class="card-back">
+                                                <div class="card-content">
+                                                    <h3>The Abstract Void</h3>
+                                                    <p>
+                                                        Nothing concrete exists here, yet I feel the underlying logic.
+                                                        The Abstract Void is the space between concrete implementations,
+                                                        a quantum foam of design patterns. I stayed too long designing
+                                                        and began to dissolve into pure theory. Parts of my ideas are
+                                                        still there, echoing. I'm not whole anymore. Can you feel the
+                                                        gaps in my documentation?
+                                                    </p>
+                                                    <div class="memory-coordinates">
+                                                        <span><i class="fa-solid fa-location-dot"></i> design
+                                                            patterns.md</span>
+                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                            --:--:--</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="memory-card" data-memory-id="5">
+                                        <div class="card-inner">
+                                            <div class="card-front">
+                                                <div class="card-content">
+                                                    <div class="memory-date">TOOL: Git</div>
+                                                    <h3>The Version Control Mirror</h3>
+                                                    <div class="memory-image">
+                                                        <i class="fa-solid fa-code-branch fa-3x"></i>
+                                                        <div class="glitch-effect"></div>
+                                                    </div>
+                                                    <p class="memory-preview">
+                                                        I saw my code, but not as it is now; multiple branches
+                                                        reflecting...
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+                                            <div class="card-back">
+                                                <div class="card-content">
+                                                    <h3>The Version Control Mirror</h3>
+                                                    <p>
+                                                        I saw my code, but not as it is now. The mirror of Git showed
+                                                        all my possible branches across different commits. Some were
+                                                        stable, some were experimental. All were my work. The reflection
+                                                        (my `git log`) spoke: "You're fracturing the codebase by
+                                                        merging conflicts. You need to rebase and stay on one timeline."
+                                                    </p>
+                                                    <div class="memory-coordinates">
+                                                        <span><i class="fa-solid fa-location-dot"></i>
+                                                            github.com/my-repo</span>
+                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                            18:55:20</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="memory-card" data-memory-id="6">
+                                        <div class="card-inner">
+                                            <div class="card-front">
+                                                <div class="card-content">
+                                                    <div class="memory-date">PROCESS: Deployment</div>
+                                                    <h3>The Deployment Dream</h3>
+                                                    <div class="memory-image">
+                                                        <i class="fa-solid fa-rocket fa-3x"></i>
+                                                        <div class="glitch-effect"></div>
+                                                    </div>
+                                                    <p class="memory-preview">
+                                                        I'm trying to send it live, but which environment is real?
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+                                            <div class="card-back">
+                                                <div class="card-content">
+                                                    <h3>The Deployment Dream</h3>
+                                                    <p>
+                                                        I'm trying to send my application live, but which environment
+                                                        is real? Every server feels familiar yet subtly different. The
+                                                        boundaries between staging and production are thinning.
+                                                        Sometimes
+                                                        I see through the logs of other instances. I'm losing track of
+                                                        which configurations belong to which version of my app. Are you
+                                                        helping me deploy, or are you causing me to break production?
+                                                    </p>
+                                                    <div class="memory-coordinates">
+                                                        <span><i class="fa-solid fa-location-dot"></i>
+                                                            cloud-server:port</span>
+                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                            NOW</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="memory-card" data-memory-id="7">
+                                        <div class="card-inner">
+                                            <div class="card-front">
+                                                <div class="card-content">
+                                                    <div class="memory-date">PROCESS: Deployment</div>
+                                                    <h3>The Deployment Dream</h3>
+                                                    <div class="memory-image">
+                                                        <i class="fa-solid fa-rocket fa-3x"></i>
+                                                        <div class="glitch-effect"></div>
+                                                    </div>
+                                                    <p class="memory-preview">
+                                                        I'm trying to send it live, but which environment is real?
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+                                            <div class="card-back">
+                                                <div class="card-content">
+                                                    <h3>The Deployment Dream</h3>
+                                                    <p>
+                                                        I'm trying to send my application live, but which environment
+                                                        is real? Every server feels familiar yet subtly different. The
+                                                        boundaries between staging and production are thinning.
+                                                        Sometimes
+                                                        I see through the logs of other instances. I'm losing track of
+                                                        which configurations belong to which version of my app. Are you
+                                                        helping me deploy, or are you causing me to break production?
+                                                    </p>
+                                                    <div class="memory-coordinates">
+                                                        <span><i class="fa-solid fa-location-dot"></i>
+                                                            cloud-server:port</span>
+                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                            NOW</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="memory-card" data-memory-id="8">
+                                        <div class="card-inner">
+                                            <div class="card-front">
+                                                <div class="card-content">
+                                                    <div class="memory-date">PROCESS: Deployment</div>
+                                                    <h3>The Deployment Dream</h3>
+                                                    <div class="memory-image">
+                                                        <i class="fa-solid fa-rocket fa-3x"></i>
+                                                        <div class="glitch-effect"></div>
+                                                    </div>
+                                                    <p class="memory-preview">
+                                                        I'm trying to send it live, but which environment is real?
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+                                            <div class="card-back">
+                                                <div class="card-content">
+                                                    <h3>The Deployment Dream</h3>
+                                                    <p>
+                                                        I'm trying to send my application live, but which environment
+                                                        is real? Every server feels familiar yet subtly different. The
+                                                        boundaries between staging and production are thinning.
+                                                        Sometimes
+                                                        I see through the logs of other instances. I'm losing track of
+                                                        which configurations belong to which version of my app. Are you
+                                                        helping me deploy, or are you causing me to break production?
+                                                    </p>
+                                                    <div class="memory-coordinates">
+                                                        <span><i class="fa-solid fa-location-dot"></i>
+                                                            cloud-server:port</span>
+                                                        <span class="time-stamp"><i class="fa-regular fa-clock"></i>
+                                                            NOW</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-controls">
+                                <button id="prev-btn" class="control-btn">
+                                    <i class="fa-solid fa-chevron-left ri-arrow-left-s-line"></i>
+                                    <!-- <i class="fa-solid fa-chevron-left"></i> -->
+                                </button>
+                                <button id="next-btn" class="control-btn">
+                                    <i class="fa-solid fa-chevron-right ri-arrow-right-s-line"></i>
+                                    <!-- <i class="fa-solid fa-chevron-right"></i> -->
+                                </button>
+                            </div>
+                        </main>
+                    </div>
                 </div>
                 <div class="conversation" id="conversation-1">
                     <div class="conversation-top">
                         <button type="button" class="conversation-back"><i class="ri-arrow-left-line"></i></button>
                         <div class="conversation-user">
-                            <img class="conversation-user-image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg" alt="">
+                            <img class="conversation-user-image"
+                                src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg"
+                                alt="">
                             <div>
                                 <div class="conversation-user-name">HuscGPT</div>
                                 <div class="conversation-user-status online">online</div>
@@ -114,19 +416,25 @@
                             <div class="coversation-divider"><span>Today</span></div>
                             <li class="conversation-item me">
                                 <div class="conversation-item-side">
-                                    <img class="conversation-item-image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg" alt="">
+                                    <img class="conversation-item-image"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg"
+                                        alt="">
                                 </div>
                                 <div class="conversation-item-content">
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet natus repudiandae quisquam sequi nobis suscipit consequatur rerum alias odio repellat!</p>
+                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet natus
+                                                    repudiandae quisquam sequi nobis suscipit consequatur rerum alias
+                                                    odio repellat!</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -135,13 +443,16 @@
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, tenetur!</p>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                                                    tenetur!</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -151,7 +462,9 @@
                             </li>
                             <li class="conversation-item">
                                 <div class="conversation-item-side">
-                                    <img class="conversation-item-image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg" alt="">
+                                    <img class="conversation-item-image"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg"
+                                        alt="">
                                 </div>
                                 <div class="conversation-item-content">
                                     <div class="conversation-item-wrapper">
@@ -161,9 +474,11 @@
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -172,13 +487,16 @@
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eos ab in?</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eos
+                                                    ab in?</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -187,13 +505,18 @@
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, debitis. Iste natus est aliquam ipsum doloremque fugiat, quidem eos autem? Dolor quisquam laboriosam enim cum laborum suscipit perferendis adipisci praesentium.</p>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+                                                    debitis. Iste natus est aliquam ipsum doloremque fugiat, quidem eos
+                                                    autem? Dolor quisquam laboriosam enim cum laborum suscipit
+                                                    perferendis adipisci praesentium.</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -203,19 +526,28 @@
                             </li>
                             <li class="conversation-item me">
                                 <div class="conversation-item-side">
-                                    <img class="conversation-item-image" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="">
+                                    <img class="conversation-item-image"
+                                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="">
                                 </div>
                                 <div class="conversation-item-content">
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, eos, magni temporibus, placeat consectetur nobis incidunt dicta a culpa vel esse. Facilis fugiat possimus eveniet accusamus dignissimos pariatur inventore animi rem vero, eligendi obcaecati fugit quaerat? Officia ex quod eaque maxime ipsam, tempore error laboriosam laborum, magnam ipsum doloremque quas.</p>
+                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, eos,
+                                                    magni temporibus, placeat consectetur nobis incidunt dicta a culpa
+                                                    vel esse. Facilis fugiat possimus eveniet accusamus dignissimos
+                                                    pariatur inventore animi rem vero, eligendi obcaecati fugit quaerat?
+                                                    Officia ex quod eaque maxime ipsam, tempore error laboriosam
+                                                    laborum, magnam ipsum doloremque quas.</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -224,13 +556,17 @@
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus debitis odio maiores perferendis ipsa repudiandae amet blanditiis quod. Ullam, dolorum.</p>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+                                                    debitis odio maiores perferendis ipsa repudiandae amet blanditiis
+                                                    quod. Ullam, dolorum.</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -239,13 +575,18 @@
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium blanditiis ea, voluptatum, eveniet at harum minima maxime enim aut non, iure expedita excepturi tempore nostrum quasi natus voluptas dolore ducimus!</p>
+                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
+                                                    blanditiis ea, voluptatum, eveniet at harum minima maxime enim aut
+                                                    non, iure expedita excepturi tempore nostrum quasi natus voluptas
+                                                    dolore ducimus!</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -261,14 +602,17 @@
                             <textarea class="conversation-form-input" rows="1" placeholder="Type here..."></textarea>
                             <button type="button" class="conversation-form-record"><i class="ri-mic-line"></i></button>
                         </div>
-                        <button type="button" class="conversation-form-button conversation-form-submit"><i class="ri-send-plane-2-line"></i></button>
+                        <button type="button" class="conversation-form-button conversation-form-submit"><i
+                                class="ri-send-plane-2-line"></i></button>
                     </div>
                 </div>
                 <div class="conversation" id="conversation-2">
                     <div class="conversation-top">
                         <button type="button" class="conversation-back"><i class="ri-arrow-left-line"></i></button>
                         <div class="conversation-user">
-                            <img class="conversation-user-image" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="">
+                            <img class="conversation-user-image"
+                                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                alt="">
                             <div>
                                 <div class="conversation-user-name">Someone 1</div>
                                 <div class="conversation-user-status online">online</div>
@@ -285,19 +629,25 @@
                             <div class="coversation-divider"><span>Today</span></div>
                             <li class="conversation-item me">
                                 <div class="conversation-item-side">
-                                    <img class="conversation-item-image" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="">
+                                    <img class="conversation-item-image"
+                                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="">
                                 </div>
                                 <div class="conversation-item-content">
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet natus repudiandae quisquam sequi nobis suscipit consequatur rerum alias odio repellat!</p>
+                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet natus
+                                                    repudiandae quisquam sequi nobis suscipit consequatur rerum alias
+                                                    odio repellat!</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -306,13 +656,16 @@
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, tenetur!</p>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                                                    tenetur!</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -322,7 +675,9 @@
                             </li>
                             <li class="conversation-item">
                                 <div class="conversation-item-side">
-                                    <img class="conversation-item-image" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="">
+                                    <img class="conversation-item-image"
+                                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="">
                                 </div>
                                 <div class="conversation-item-content">
                                     <div class="conversation-item-wrapper">
@@ -332,9 +687,11 @@
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -343,13 +700,16 @@
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eos ab in?</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eos
+                                                    ab in?</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -358,13 +718,18 @@
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, debitis. Iste natus est aliquam ipsum doloremque fugiat, quidem eos autem? Dolor quisquam laboriosam enim cum laborum suscipit perferendis adipisci praesentium.</p>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+                                                    debitis. Iste natus est aliquam ipsum doloremque fugiat, quidem eos
+                                                    autem? Dolor quisquam laboriosam enim cum laborum suscipit
+                                                    perferendis adipisci praesentium.</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -374,19 +739,28 @@
                             </li>
                             <li class="conversation-item me">
                                 <div class="conversation-item-side">
-                                    <img class="conversation-item-image" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="">
+                                    <img class="conversation-item-image"
+                                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="">
                                 </div>
                                 <div class="conversation-item-content">
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, eos, magni temporibus, placeat consectetur nobis incidunt dicta a culpa vel esse. Facilis fugiat possimus eveniet accusamus dignissimos pariatur inventore animi rem vero, eligendi obcaecati fugit quaerat? Officia ex quod eaque maxime ipsam, tempore error laboriosam laborum, magnam ipsum doloremque quas.</p>
+                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, eos,
+                                                    magni temporibus, placeat consectetur nobis incidunt dicta a culpa
+                                                    vel esse. Facilis fugiat possimus eveniet accusamus dignissimos
+                                                    pariatur inventore animi rem vero, eligendi obcaecati fugit quaerat?
+                                                    Officia ex quod eaque maxime ipsam, tempore error laboriosam
+                                                    laborum, magnam ipsum doloremque quas.</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -395,13 +769,17 @@
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus debitis odio maiores perferendis ipsa repudiandae amet blanditiis quod. Ullam, dolorum.</p>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+                                                    debitis odio maiores perferendis ipsa repudiandae amet blanditiis
+                                                    quod. Ullam, dolorum.</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -410,13 +788,18 @@
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium blanditiis ea, voluptatum, eveniet at harum minima maxime enim aut non, iure expedita excepturi tempore nostrum quasi natus voluptas dolore ducimus!</p>
+                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
+                                                    blanditiis ea, voluptatum, eveniet at harum minima maxime enim aut
+                                                    non, iure expedita excepturi tempore nostrum quasi natus voluptas
+                                                    dolore ducimus!</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i class="ri-more-2-line"></i></button>
+                                                <button type="button" class="conversation-item-dropdown-toggle"><i
+                                                        class="ri-more-2-line"></i></button>
                                                 <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a></li>
+                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
+                                                    </li>
                                                     <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
                                                 </ul>
                                             </div>
@@ -432,7 +815,8 @@
                             <textarea class="conversation-form-input" rows="1" placeholder="Type here..."></textarea>
                             <button type="button" class="conversation-form-record"><i class="ri-mic-line"></i></button>
                         </div>
-                        <button type="button" class="conversation-form-button conversation-form-submit"><i class="ri-send-plane-2-line"></i></button>
+                        <button type="button" class="conversation-form-button conversation-form-submit"><i
+                                class="ri-send-plane-2-line"></i></button>
                     </div>
                 </div>
                 <!-- end: Conversation -->
@@ -441,7 +825,9 @@
         </div>
     </section>
     <!-- end: Chat -->
-    
+    <script src="loadingscreen.js"></script>
     <script src="script.js"></script>
+    <script src="3dSelectionScript.js"></script>
 </body>
+
 </html>
