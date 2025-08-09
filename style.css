@@ -163,9 +163,9 @@ body {
     
     padding: 22px 0px;
 
-    /* white-space: nowrap;
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; */
+    text-overflow: ellipsis;
 }
 
 .chat-sidebar-menu>*>img {
