@@ -109,7 +109,7 @@ body {
 }
 
 .chat-sidebar-menu {
-    opacity: 0.5;
+
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -1017,7 +1017,7 @@ body {
 
     .chat-sidebar-icons
     {   
-        margin: -3px 5px 0px -10px;
+        margin: -3px 5px 0px 5px;
     }
 
     .chat-sidebar-icons > img {
