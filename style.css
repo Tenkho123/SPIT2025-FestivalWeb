@@ -1018,6 +1018,7 @@ body {
     .chat-sidebar-icons
     {   
         margin: -3px 5px 0px 5px;
+        gap: 20px;
     }
 
     .chat-sidebar-icons > img {
