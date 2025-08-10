@@ -1,3 +1,11 @@
+function scaleChat() {
+    const baseWidth = 1360;
+    const scaleFactor = Math.min(window.innerWidth / baseWidth, 1);
+    document.querySelector('.chat-content').style.transform = `scale(${scaleFactor})`;
+}
+
+window.addEventListener('resize', scaleChat);
+window.addEventListener('load', scaleChat);
 
 // start: Scrollbar
 const scrollableDiv = document.querySelector('.chat-container');
