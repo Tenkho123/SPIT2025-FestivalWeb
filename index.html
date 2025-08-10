@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="modules/LoadingScreen/loadingscreen.css">
     <link rel="stylesheet" href="modules/FlatCardSliding/FlatCardSliding.css">
     <link rel="stylesheet" href="modules/BannerSelection/BannerSelection.css">
+    <link rel="stylesheet" href="modules/Plate3DSelection/Plate3DSelection.css">
     <link rel="stylesheet" href="fonts.css">
     <title>Chat</title>
 </head>
@@ -28,7 +29,7 @@
     <section class="chat-section">
         <div class="chat-container">
             <!-- start: Sidebar -->
-            <aside class="chat-sidebar">
+            <div class="chat-sidebar">
                 <a href="#" class="chat-sidebar-logo">
                     <!-- <i class="ri-chat-1-fill"></i> -->
                     <img src="images/Logo HueFes.png" alt="">
@@ -73,7 +74,7 @@
                         </ul>
                     </li> -->
                 </ul>
-            </aside>
+            </div>
             <!-- end: Sidebar -->
             <!-- start: Content -->
             <div class="chat-content">
@@ -90,820 +91,605 @@
                         </video>
                     </div>
 
+                    <div class="introduction-background">
+                        <img src="images/Background2.png" alt="">
+                    </div>
+
                     <!-- <i class="ri-chat-3-line"></i>
                     <p>Select chat and view conversation!</p> -->
-                    <div class="cards3D">
-                        <div class="container-fluid h-100 d-flex flex-column">
-                            <main
-                                class="flex-grow-1 d-flex align-items-center justify-content-center position-relative">
-                                <div class="carousel-container">
-                                    <div class="carousel" id="memory-carousel">
-                                        <!-- Làng nghề nón lá Huế -->
-                                        <div class="memory-card" data-memory-id="1">
-                                            <div class="card-inner">
-                                                <div class="card-front">
-                                                    <div class="card-content">
-                                                        <div class="memory-date">LÀNG NGHỀ: Nón lá</div>
-                                                        <h3>Nón lá Huế</h3>
-                                                        <div class="memory-image">
-                                                            <i class="fa-solid fa-hat-cowboy fa-3x"></i>
-                                                            <div class="glitch-effect"></div>
-                                                        </div>
-                                                        <p class="memory-preview">
-                                                            Nón lá bài thơ Huế – nét duyên dáng gắn liền hình ảnh người
-                                                            con gái xứ mộng mơ.
-                                                        </p>
-                                                        <div class="card-glow"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-back">
-                                                    <div class="card-content">
-                                                        <h3>Nón lá Huế</h3>
-                                                        <p>
-                                                            Làng Tây Hồ (Huế) nổi tiếng với nón lá bài thơ – loại nón có
-                                                            lớp lá mỏng, bên trong là hình ảnh và thơ ẩn hiện dưới ánh
-                                                            sáng.
-                                                            Đây là món quà lưu niệm tinh tế, vừa che nắng mưa, vừa mang
-                                                            giá trị văn hóa đặc sắc của đất Cố đô.
-                                                        </p>
-                                                        <div class="memory-coordinates">
-                                                            <span><i class="fa-solid fa-location-dot"></i> Tây Hồ,
-                                                                Huế</span>
-                                                            <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                                Trăm năm</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                    <div class="cards-background">
+                        <img src="images/Background3.png" alt="">
+                        <h1> MỘT SỐ NÉT VĂN HÓA ĐẶC SẮC </h1>
 
-
-                                        <!-- Làng nghề thêu tay Thuỷ Xuân -->
-                                        <div class="memory-card" data-memory-id="2">
-                                            <div class="card-inner">
-                                                <div class="card-front">
-                                                    <div class="card-content">
-                                                        <div class="memory-date">LÀNG NGHỀ: Thêu tay</div>
-                                                        <h3>Thêu tay Thuỷ Xuân</h3>
-                                                        <div class="memory-image">
-                                                            <i class="fa-solid fa-needle fa-3x"></i>
-                                                            <div class="glitch-effect"></div>
-                                                        </div>
-                                                        <p class="memory-preview">
-                                                            Nét tinh xảo của từng mũi kim, từng đường chỉ mang đậm hồn
-                                                            Huế.
-                                                        </p>
-                                                        <div class="card-glow"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-back">
-                                                    <div class="card-content">
-                                                        <h3>Thêu tay Thuỷ Xuân</h3>
-                                                        <p>
-                                                            Làng Thuỷ Xuân nổi tiếng với nghề thêu tay truyền thống,
-                                                            từng phục vụ cung đình nhà Nguyễn.
-                                                            Các sản phẩm như tranh thêu, khăn, áo dài được làm công phu,
-                                                            tinh tế, phản ánh sự khéo léo và kiên nhẫn của người thợ
-                                                            Huế.
-                                                        </p>
-                                                        <div class="memory-coordinates">
-                                                            <span><i class="fa-solid fa-location-dot"></i> Thuỷ Xuân,
-                                                                Huế</span>
-                                                            <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                                Hơn 300 năm</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Làng nghề mộc Mỹ Xuyên -->
-                                        <div class="memory-card" data-memory-id="3">
-                                            <div class="card-inner">
-                                                <div class="card-front">
-                                                    <div class="card-content">
-                                                        <div class="memory-date">LÀNG NGHỀ: Mộc</div>
-                                                        <h3>Mộc Mỹ Xuyên</h3>
-                                                        <div class="memory-image">
-                                                            <i class="fa-solid fa-hammer fa-3x"></i>
-                                                            <div class="glitch-effect"></div>
-                                                        </div>
-                                                        <p class="memory-preview">
-                                                            Tinh hoa chạm khắc gỗ phục vụ cung đình xưa và đời sống nay.
-                                                        </p>
-                                                        <div class="card-glow"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-back">
-                                                    <div class="card-content">
-                                                        <h3>Mộc Mỹ Xuyên</h3>
-                                                        <p>
-                                                            Làng Mỹ Xuyên có truyền thống chạm khắc và chế tác đồ gỗ từ
-                                                            thế kỷ 16.
-                                                            Sản phẩm bao gồm bàn ghế, án thờ, hoành phi câu đối... nổi
-                                                            bật với hoa văn cung đình tinh xảo, kết hợp nghệ thuật và
-                                                            công năng.
-                                                        </p>
-                                                        <div class="memory-coordinates">
-                                                            <span><i class="fa-solid fa-location-dot"></i> Phong Điền,
-                                                                Huế</span>
-                                                            <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                                Hơn 400 năm</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Làng nghề hương Thuỷ Xuân -->
-                                        <div class="memory-card" data-memory-id="4">
-                                            <div class="card-inner">
-                                                <div class="card-front">
-                                                    <div class="card-content">
-                                                        <div class="memory-date">LÀNG NGHỀ: Hương</div>
-                                                        <h3>Hương Thuỷ Xuân</h3>
-                                                        <div class="memory-image">
-                                                            <i class="fa-solid fa-wind fa-3x"></i>
-                                                            <div class="glitch-effect"></div>
-                                                        </div>
-                                                        <p class="memory-preview">
-                                                            Sắc màu rực rỡ và hương thơm dịu nhẹ lan tỏa khắp xóm nhỏ.
-                                                        </p>
-                                                        <div class="card-glow"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-back">
-                                                    <div class="card-content">
-                                                        <h3>Hương Thuỷ Xuân</h3>
-                                                        <p>
-                                                            Làng hương Thuỷ Xuân đã tồn tại hơn 700 năm, nổi tiếng với
-                                                            những bó hương nhiều màu sắc và mùi thơm đặc trưng.
-                                                            Nghề này vừa phục vụ nhu cầu tâm linh, vừa trở thành điểm du
-                                                            lịch độc đáo cho du khách đến Huế.
-                                                        </p>
-                                                        <div class="memory-coordinates">
-                                                            <span><i class="fa-solid fa-location-dot"></i> Thuỷ Xuân,
-                                                                Huế</span>
-                                                            <span class="time-stamp"><i class="fa-regular fa-clock"></i>
-                                                                Hơn 700 năm</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <<!-- Làng nghề gốm Phước Tích -->
-                                            <div class="memory-card" data-memory-id="5">
+                        <div class="cards3D">
+                            <h1> >> LÀNG NGHỀ TRUYỀN THỐNG </h1>
+                            <img src="images/Background4.png" alt="">
+                            <div class="container-fluid h-100 d-flex flex-column">
+                                <main
+                                    class="flex-grow-1 d-flex align-items-center justify-content-center position-relative">
+                                    <div class="carousel-container">
+                                        <div class="carousel" id="memory-carousel">
+                                            <!-- Làng nghề nón lá Huế -->
+                                            <div class="memory-card" data-memory-id="1">
                                                 <div class="card-inner">
                                                     <div class="card-front">
                                                         <div class="card-content">
-                                                            <div class="memory-date">LÀNG NGHỀ: Gốm</div>
-                                                            <h3>Gốm Phước Tích</h3>
+                                                            <div class="memory-date">LÀNG NGHỀ: Nón lá</div>
+                                                            <h3>Nón lá Huế</h3>
                                                             <div class="memory-image">
-                                                                <i class="fa-solid fa-mug-hot fa-3x"></i>
+                                                                <i class="fa-solid fa-hat-cowboy fa-3x"></i>
                                                                 <div class="glitch-effect"></div>
                                                             </div>
                                                             <p class="memory-preview">
-                                                                Nét mộc mạc của gốm thủ công lưu giữ hồn xưa đất Việt.
+                                                                Nón lá bài thơ Huế – nét duyên dáng gắn liền hình ảnh
+                                                                người
+                                                                con gái xứ mộng mơ.
                                                             </p>
                                                             <div class="card-glow"></div>
                                                         </div>
                                                     </div>
                                                     <div class="card-back">
                                                         <div class="card-content">
-                                                            <h3>Gốm Phước Tích</h3>
+                                                            <h3>Nón lá Huế</h3>
                                                             <p>
-                                                                Làng gốm Phước Tích có hơn 500 năm lịch sử, chuyên làm
-                                                                gốm nung thủ công bằng lò củi.
-                                                                Sản phẩm nổi tiếng bền, đẹp, mộc mạc, từ chum, vại đến
-                                                                các vật dụng trang trí tinh tế.
+                                                                Làng Tây Hồ (Huế) nổi tiếng với nón lá bài thơ – loại
+                                                                nón có
+                                                                lớp lá mỏng, bên trong là hình ảnh và thơ ẩn hiện dưới
+                                                                ánh
+                                                                sáng.
+                                                                Đây là món quà lưu niệm tinh tế, vừa che nắng mưa, vừa
+                                                                mang
+                                                                giá trị văn hóa đặc sắc của đất Cố đô.
                                                             </p>
                                                             <div class="memory-coordinates">
-                                                                <span><i class="fa-solid fa-location-dot"></i> Phong
-                                                                    Điền, Huế</span>
+                                                                <span><i class="fa-solid fa-location-dot"></i> Tây Hồ,
+                                                                    Huế</span>
                                                                 <span class="time-stamp"><i
-                                                                        class="fa-regular fa-clock"></i> Hơn 500
-                                                                    năm</span>
+                                                                        class="fa-regular fa-clock"></i>
+                                                                    Trăm năm</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <!-- Làng nghề pháp lam Huế -->
-                                            <div class="memory-card" data-memory-id="6">
-                                                <div class="card-inner">
-                                                    <div class="card-front">
-                                                        <div class="card-content">
-                                                            <div class="memory-date">LÀNG NGHỀ: Pháp lam</div>
-                                                            <h3>Pháp lam Huế</h3>
-                                                            <div class="memory-image">
-                                                                <i class="fa-solid fa-gem fa-3x"></i>
-                                                                <div class="glitch-effect"></div>
-                                                            </div>
-                                                            <p class="memory-preview">
-                                                                Men màu rực rỡ, bền đẹp như nét vàng son triều Nguyễn.
-                                                            </p>
-                                                            <div class="card-glow"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-back">
-                                                        <div class="card-content">
-                                                            <h3>Pháp lam Huế</h3>
-                                                            <p>
-                                                                Pháp lam là nghệ thuật tráng men màu trên kim loại, du
-                                                                nhập vào Huế thế kỷ 19 dưới triều Nguyễn.
-                                                                Sản phẩm gồm bình, lư hương, đồ trang trí, phục vụ cung
-                                                                đình và nay được phục dựng như một di sản quý.
-                                                            </p>
-                                                            <div class="memory-coordinates">
-                                                                <span><i class="fa-solid fa-location-dot"></i> Kinh
-                                                                    thành Huế</span>
-                                                                <span class="time-stamp"><i
-                                                                        class="fa-regular fa-clock"></i> Hơn 200
-                                                                    năm</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
 
-                                            <!-- Làng nghề đan lát Bao La -->
-                                            <div class="memory-card" data-memory-id="7">
+                                            <!-- Làng nghề thêu tay Thuỷ Xuân -->
+                                            <div class="memory-card" data-memory-id="2">
                                                 <div class="card-inner">
                                                     <div class="card-front">
                                                         <div class="card-content">
-                                                            <div class="memory-date">LÀNG NGHỀ: Đan lát</div>
-                                                            <h3>Đan lát Bao La</h3>
+                                                            <div class="memory-date">LÀNG NGHỀ: Thêu tay</div>
+                                                            <h3>Thêu tay Thuỷ Xuân</h3>
                                                             <div class="memory-image">
-                                                                <i class="fa-solid fa-basket-shopping fa-3x"></i>
+                                                                <i class="fa-solid fa-needle fa-3x"></i>
                                                                 <div class="glitch-effect"></div>
                                                             </div>
                                                             <p class="memory-preview">
-                                                                Tre trúc mộc mạc, bền chắc qua bàn tay khéo léo.
+                                                                Nét tinh xảo của từng mũi kim, từng đường chỉ mang đậm
+                                                                hồn
+                                                                Huế.
                                                             </p>
                                                             <div class="card-glow"></div>
                                                         </div>
                                                     </div>
                                                     <div class="card-back">
                                                         <div class="card-content">
-                                                            <h3>Đan lát Bao La</h3>
+                                                            <h3>Thêu tay Thuỷ Xuân</h3>
                                                             <p>
-                                                                Làng Bao La nổi tiếng với nghề đan lát tre, nứa tạo ra
-                                                                rổ, rá, giỏ, nia… bền chắc và thân thiện môi trường.
-                                                                Đây là nghề truyền thống gắn bó đời sống nông thôn xứ
-                                                                Huế qua bao thế hệ.
-                                                            </p>
-                                                            <div class="memory-coordinates">
-                                                                <span><i class="fa-solid fa-location-dot"></i> Quảng
-                                                                    Điền, Huế</span>
-                                                                <span class="time-stamp"><i
-                                                                        class="fa-regular fa-clock"></i> Hơn 500
-                                                                    năm</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Làng nghề trầm hương Thủy Xuân -->
-                                            <div class="memory-card" data-memory-id="8">
-                                                <div class="card-inner">
-                                                    <div class="card-front">
-                                                        <div class="card-content">
-                                                            <div class="memory-date">LÀNG NGHỀ: Trầm hương</div>
-                                                            <h3>Trầm hương Thủy Xuân</h3>
-                                                            <div class="memory-image">
-                                                                <i class="fa-solid fa-spa fa-3x"></i>
-                                                                <div class="glitch-effect"></div>
-                                                            </div>
-                                                            <p class="memory-preview">
-                                                                Mùi hương trầm ấm áp, thanh tịnh lan khắp không gian.
-                                                            </p>
-                                                            <div class="card-glow"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-back">
-                                                        <div class="card-content">
-                                                            <h3>Trầm hương Thủy Xuân</h3>
-                                                            <p>
-                                                                Người dân Thủy Xuân chế tác trầm hương thành nhang vòng,
-                                                                nhang thẻ và đồ mỹ nghệ cao cấp.
-                                                                Hương thơm dịu ngọt, sâu lắng, thường dùng trong nghi lễ
-                                                                và trang trí, mang đậm hồn Việt.
+                                                                Làng Thuỷ Xuân nổi tiếng với nghề thêu tay truyền thống,
+                                                                từng phục vụ cung đình nhà Nguyễn.
+                                                                Các sản phẩm như tranh thêu, khăn, áo dài được làm công
+                                                                phu,
+                                                                tinh tế, phản ánh sự khéo léo và kiên nhẫn của người thợ
+                                                                Huế.
                                                             </p>
                                                             <div class="memory-coordinates">
                                                                 <span><i class="fa-solid fa-location-dot"></i> Thuỷ
-                                                                    Xuân, Huế</span>
+                                                                    Xuân,
+                                                                    Huế</span>
                                                                 <span class="time-stamp"><i
-                                                                        class="fa-regular fa-clock"></i> Trăm năm</span>
+                                                                        class="fa-regular fa-clock"></i>
+                                                                    Hơn 300 năm</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
+                                            <!-- Làng nghề mộc Mỹ Xuyên -->
+                                            <div class="memory-card" data-memory-id="3">
+                                                <div class="card-inner">
+                                                    <div class="card-front">
+                                                        <div class="card-content">
+                                                            <div class="memory-date">LÀNG NGHỀ: Mộc</div>
+                                                            <h3>Mộc Mỹ Xuyên</h3>
+                                                            <div class="memory-image">
+                                                                <i class="fa-solid fa-hammer fa-3x"></i>
+                                                                <div class="glitch-effect"></div>
+                                                            </div>
+                                                            <p class="memory-preview">
+                                                                Tinh hoa chạm khắc gỗ phục vụ cung đình xưa và đời sống
+                                                                nay.
+                                                            </p>
+                                                            <div class="card-glow"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-back">
+                                                        <div class="card-content">
+                                                            <h3>Mộc Mỹ Xuyên</h3>
+                                                            <p>
+                                                                Làng Mỹ Xuyên có truyền thống chạm khắc và chế tác đồ gỗ
+                                                                từ
+                                                                thế kỷ 16.
+                                                                Sản phẩm bao gồm bàn ghế, án thờ, hoành phi câu đối...
+                                                                nổi
+                                                                bật với hoa văn cung đình tinh xảo, kết hợp nghệ thuật
+                                                                và
+                                                                công năng.
+                                                            </p>
+                                                            <div class="memory-coordinates">
+                                                                <span><i class="fa-solid fa-location-dot"></i> Phong
+                                                                    Điền,
+                                                                    Huế</span>
+                                                                <span class="time-stamp"><i
+                                                                        class="fa-regular fa-clock"></i>
+                                                                    Hơn 400 năm</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Làng nghề hương Thuỷ Xuân -->
+                                            <div class="memory-card" data-memory-id="4">
+                                                <div class="card-inner">
+                                                    <div class="card-front">
+                                                        <div class="card-content">
+                                                            <div class="memory-date">LÀNG NGHỀ: Hương</div>
+                                                            <h3>Hương Thuỷ Xuân</h3>
+                                                            <div class="memory-image">
+                                                                <i class="fa-solid fa-wind fa-3x"></i>
+                                                                <div class="glitch-effect"></div>
+                                                            </div>
+                                                            <p class="memory-preview">
+                                                                Sắc màu rực rỡ và hương thơm dịu nhẹ lan tỏa khắp xóm
+                                                                nhỏ.
+                                                            </p>
+                                                            <div class="card-glow"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-back">
+                                                        <div class="card-content">
+                                                            <h3>Hương Thuỷ Xuân</h3>
+                                                            <p>
+                                                                Làng hương Thuỷ Xuân đã tồn tại hơn 700 năm, nổi tiếng
+                                                                với
+                                                                những bó hương nhiều màu sắc và mùi thơm đặc trưng.
+                                                                Nghề này vừa phục vụ nhu cầu tâm linh, vừa trở thành
+                                                                điểm du
+                                                                lịch độc đáo cho du khách đến Huế.
+                                                            </p>
+                                                            <div class="memory-coordinates">
+                                                                <span><i class="fa-solid fa-location-dot"></i> Thuỷ
+                                                                    Xuân,
+                                                                    Huế</span>
+                                                                <span class="time-stamp"><i
+                                                                        class="fa-regular fa-clock"></i>
+                                                                    Hơn 700 năm</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <<!-- Làng nghề gốm Phước Tích -->
+                                                <div class="memory-card" data-memory-id="5">
+                                                    <div class="card-inner">
+                                                        <div class="card-front">
+                                                            <div class="card-content">
+                                                                <div class="memory-date">LÀNG NGHỀ: Gốm</div>
+                                                                <h3>Gốm Phước Tích</h3>
+                                                                <div class="memory-image">
+                                                                    <i class="fa-solid fa-mug-hot fa-3x"></i>
+                                                                    <div class="glitch-effect"></div>
+                                                                </div>
+                                                                <p class="memory-preview">
+                                                                    Nét mộc mạc của gốm thủ công lưu giữ hồn xưa đất
+                                                                    Việt.
+                                                                </p>
+                                                                <div class="card-glow"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-back">
+                                                            <div class="card-content">
+                                                                <h3>Gốm Phước Tích</h3>
+                                                                <p>
+                                                                    Làng gốm Phước Tích có hơn 500 năm lịch sử, chuyên
+                                                                    làm
+                                                                    gốm nung thủ công bằng lò củi.
+                                                                    Sản phẩm nổi tiếng bền, đẹp, mộc mạc, từ chum, vại
+                                                                    đến
+                                                                    các vật dụng trang trí tinh tế.
+                                                                </p>
+                                                                <div class="memory-coordinates">
+                                                                    <span><i class="fa-solid fa-location-dot"></i> Phong
+                                                                        Điền, Huế</span>
+                                                                    <span class="time-stamp"><i
+                                                                            class="fa-regular fa-clock"></i> Hơn 500
+                                                                        năm</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Làng nghề pháp lam Huế -->
+                                                <div class="memory-card" data-memory-id="6">
+                                                    <div class="card-inner">
+                                                        <div class="card-front">
+                                                            <div class="card-content">
+                                                                <div class="memory-date">LÀNG NGHỀ: Pháp lam</div>
+                                                                <h3>Pháp lam Huế</h3>
+                                                                <div class="memory-image">
+                                                                    <i class="fa-solid fa-gem fa-3x"></i>
+                                                                    <div class="glitch-effect"></div>
+                                                                </div>
+                                                                <p class="memory-preview">
+                                                                    Men màu rực rỡ, bền đẹp như nét vàng son triều
+                                                                    Nguyễn.
+                                                                </p>
+                                                                <div class="card-glow"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-back">
+                                                            <div class="card-content">
+                                                                <h3>Pháp lam Huế</h3>
+                                                                <p>
+                                                                    Pháp lam là nghệ thuật tráng men màu trên kim loại,
+                                                                    du
+                                                                    nhập vào Huế thế kỷ 19 dưới triều Nguyễn.
+                                                                    Sản phẩm gồm bình, lư hương, đồ trang trí, phục vụ
+                                                                    cung
+                                                                    đình và nay được phục dựng như một di sản quý.
+                                                                </p>
+                                                                <div class="memory-coordinates">
+                                                                    <span><i class="fa-solid fa-location-dot"></i> Kinh
+                                                                        thành Huế</span>
+                                                                    <span class="time-stamp"><i
+                                                                            class="fa-regular fa-clock"></i> Hơn 200
+                                                                        năm</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Làng nghề đan lát Bao La -->
+                                                <div class="memory-card" data-memory-id="7">
+                                                    <div class="card-inner">
+                                                        <div class="card-front">
+                                                            <div class="card-content">
+                                                                <div class="memory-date">LÀNG NGHỀ: Đan lát</div>
+                                                                <h3>Đan lát Bao La</h3>
+                                                                <div class="memory-image">
+                                                                    <i class="fa-solid fa-basket-shopping fa-3x"></i>
+                                                                    <div class="glitch-effect"></div>
+                                                                </div>
+                                                                <p class="memory-preview">
+                                                                    Tre trúc mộc mạc, bền chắc qua bàn tay khéo léo.
+                                                                </p>
+                                                                <div class="card-glow"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-back">
+                                                            <div class="card-content">
+                                                                <h3>Đan lát Bao La</h3>
+                                                                <p>
+                                                                    Làng Bao La nổi tiếng với nghề đan lát tre, nứa tạo
+                                                                    ra
+                                                                    rổ, rá, giỏ, nia… bền chắc và thân thiện môi trường.
+                                                                    Đây là nghề truyền thống gắn bó đời sống nông thôn
+                                                                    xứ
+                                                                    Huế qua bao thế hệ.
+                                                                </p>
+                                                                <div class="memory-coordinates">
+                                                                    <span><i class="fa-solid fa-location-dot"></i> Quảng
+                                                                        Điền, Huế</span>
+                                                                    <span class="time-stamp"><i
+                                                                            class="fa-regular fa-clock"></i> Hơn 500
+                                                                        năm</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Làng nghề trầm hương Thủy Xuân -->
+                                                <div class="memory-card" data-memory-id="8">
+                                                    <div class="card-inner">
+                                                        <div class="card-front">
+                                                            <div class="card-content">
+                                                                <div class="memory-date">LÀNG NGHỀ: Trầm hương</div>
+                                                                <h3>Trầm hương Thủy Xuân</h3>
+                                                                <div class="memory-image">
+                                                                    <i class="fa-solid fa-spa fa-3x"></i>
+                                                                    <div class="glitch-effect"></div>
+                                                                </div>
+                                                                <p class="memory-preview">
+                                                                    Mùi hương trầm ấm áp, thanh tịnh lan khắp không
+                                                                    gian.
+                                                                </p>
+                                                                <div class="card-glow"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-back">
+                                                            <div class="card-content">
+                                                                <h3>Trầm hương Thủy Xuân</h3>
+                                                                <p>
+                                                                    Người dân Thủy Xuân chế tác trầm hương thành nhang
+                                                                    vòng,
+                                                                    nhang thẻ và đồ mỹ nghệ cao cấp.
+                                                                    Hương thơm dịu ngọt, sâu lắng, thường dùng trong
+                                                                    nghi lễ
+                                                                    và trang trí, mang đậm hồn Việt.
+                                                                </p>
+                                                                <div class="memory-coordinates">
+                                                                    <span><i class="fa-solid fa-location-dot"></i> Thuỷ
+                                                                        Xuân, Huế</span>
+                                                                    <span class="time-stamp"><i
+                                                                            class="fa-regular fa-clock"></i> Trăm
+                                                                        năm</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+
+                                        <div class="carousel-controls">
+                                            <button id="prev-btn" class="control-btn">
+                                                <i class="fa-solid fa-chevron-left ri-arrow-left-s-line"></i>
+                                                <!-- <i class="fa-solid fa-chevron-left"></i> -->
+                                            </button>
+                                            <button id="next-btn" class="control-btn">
+                                                <i class="fa-solid fa-chevron-right ri-arrow-right-s-line"></i>
+                                                <!-- <i class="fa-solid fa-chevron-right"></i> -->
+                                            </button>
+                                        </div>
+                                </main>
+                            </div>
+                        </div>
+
+                        <div class="flat-card-container">
+                            <h1> >> ẨM THỰC </h1>
+                            <img src="images/WoodenTray.png" alt="">
+                            <div class="container-fluid h-100 d-flex flex-column">
+                                <main
+                                    class="flex-grow-1 d-flex align-items-center justify-content-center position-relative">
+                                    <div class="carousel-plate-container">
+                                        <div class=carousel-plate id="memory-plate-carousel">
+                                            <div class="memory-plate-card" data-memory-id="1">
+                                                <img src="images/Plate.png" alt="">
+
+                                                <div class="card-plate-content">
+                                                    <div class="memory-plate-date">LANGUAGE: Python</div>
+                                                    <h3>First Line of Code</h3>
+                                                    <div class="memory-plate-image">
+                                                        <i class="fa-solid fa-code fa-3x"></i>
+                                                        <div class="glitch-plate-effect"></div>
+                                                    </div>
+                                                    <p class="memory-plate-preview">
+                                                        The terminal glowed, displaying my first 'Hello, World!'...
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="memory-plate-card" data-memory-id="2">
+                                                <img src="images/Plate.png" alt="">
+
+                                                <div class="card-plate-content">
+                                                    <div class="memory-plate-date">LANGUAGE: Python</div>
+                                                    <h3>First Line of Code</h3>
+                                                    <div class="memory-plate-image">
+                                                        <i class="fa-solid fa-code fa-3x"></i>
+                                                        <div class="glitch-plate-effect"></div>
+                                                    </div>
+                                                    <p class="memory-plate-preview">
+                                                        The terminal glowed, displaying my first 'Hello, World!'...
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="memory-plate-card" data-memory-id="3">
+                                                <img src="images/Plate.png" alt="">
+
+                                                <div class="card-plate-content">
+                                                    <div class="memory-plate-date">LANGUAGE: Python</div>
+                                                    <h3>First Line of Code</h3>
+                                                    <div class="memory-plate-image">
+                                                        <i class="fa-solid fa-code fa-3x"></i>
+                                                        <div class="glitch-plate-effect"></div>
+                                                    </div>
+                                                    <p class="memory-plate-preview">
+                                                        The terminal glowed, displaying my first 'Hello, World!'...
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="memory-plate-card" data-memory-id="4">
+                                                <img src="images/Plate.png" alt="">
+
+                                                <div class="card-plate-content">
+                                                    <div class="memory-plate-date">LANGUAGE: Python</div>
+                                                    <h3>First Line of Code</h3>
+                                                    <div class="memory-plate-image">
+                                                        <i class="fa-solid fa-code fa-3x"></i>
+                                                        <div class="glitch-plate-effect"></div>
+                                                    </div>
+                                                    <p class="memory-plate-preview">
+                                                        The terminal glowed, displaying my first 'Hello, World!'...
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="memory-plate-card" data-memory-id="5">
+                                                <img src="images/Plate.png" alt="">
+
+                                                <div class="card-plate-content">
+                                                    <div class="memory-plate-date">LANGUAGE: Python</div>
+                                                    <h3>First Line of Code</h3>
+                                                    <div class="memory-plate-image">
+                                                        <i class="fa-solid fa-code fa-3x"></i>
+                                                        <div class="glitch-plate-effect"></div>
+                                                    </div>
+                                                    <p class="memory-plate-preview">
+                                                        The terminal glowed, displaying my first 'Hello, World!'...
+                                                    </p>
+                                                    <div class="card-glow"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
 
-                                    <div class="carousel-controls">
-                                        <button id="prev-btn" class="control-btn">
-                                            <i class="fa-solid fa-chevron-left ri-arrow-left-s-line"></i>
-                                            <!-- <i class="fa-solid fa-chevron-left"></i> -->
+                                    <div class="carousel-plate-controls">
+                                        <button id="prev-plate-btn" class="plate-control-btn">
+                                            <i class="fa-solid fa-chevron-left"></i>
                                         </button>
-                                        <button id="next-btn" class="control-btn">
-                                            <i class="fa-solid fa-chevron-right ri-arrow-right-s-line"></i>
-                                            <!-- <i class="fa-solid fa-chevron-right"></i> -->
+                                        <button id="next-plate-btn" class="plate-control-btn">
+                                            <i class="fa-solid fa-chevron-right"></i>
                                         </button>
                                     </div>
-                            </main>
+                                </main>
+                            </div>
+                        </div>
+
+                        <div class="slider-container">
+                            <h1> >> NGHỆ THUẬT </h1>
+                            <div class="slider">
+                                <div class="slides">
+                                    <div class="slide">
+                                        <img src="images/TestImg1.jpg" alt="Slide 1">
+                                        <div class="slide-content">
+                                            <h1>BLOG</h1>
+                                            <p>Nội dung 1</p>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="images/TestImg2.jpg" alt="Slide 2">
+                                        <div class="slide-content">
+                                            <h1>Khám phá</h1>
+                                            <p>Nội dung 2</p>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="images/TestImg3.jpg" alt="Slide 3">
+                                        <div class="slide-content">
+                                            <h1>Du lịch</h1>
+                                            <p>Nội dung 3</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dots"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="conversation" id="conversation-1">
-                    <div class="conversation-top">
-                        <button type="button" class="conversation-back"><i class="ri-arrow-left-line"></i></button>
-                        <div class="conversation-user">
-                            <img class="conversation-user-image"
-                                src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg"
-                                alt="">
+                    <div class="footer">
+                        <img src="images/FooterBackground.png" alt="">
+                        <img src="images/Building1.png" alt="">
+
+                        <div class="footer-contents">
                             <div>
-                                <div class="conversation-user-name">HuscGPT</div>
-                                <div class="conversation-user-status online">online</div>
+                                <img src="images/TeamLogo.png" alt="">
+                                <h1>BungeesThree</h1>
+                                <div class="footer-team-info">
+                                    <p><i class="ri-phone-fill"></i> 0942525557 - 0942525557 - 0942525557</p>
+                                    <p><i class="ri-mail-fill"></i> bugeesthree@gmail.com</p>
+                                    <p><i class="ri-map-pin-2-fill"></i> 77 Nguyễn Huệ, Thành phố Huế, Việt Nam</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="conversation-buttons">
-                            <button type="button"><i class="ri-phone-fill"></i></button>
-                            <button type="button"><i class="ri-vidicon-line"></i></button>
-                            <button type="button"><i class="ri-information-line"></i></button>
-                        </div>
-                    </div>
-                    <div class="conversation-main">
-                        <ul class="conversation-wrapper">
-                            <div class="coversation-divider"><span>Today</span></div>
-                            <li class="conversation-item me">
-                                <div class="conversation-item-side">
-                                    <img class="conversation-item-image"
-                                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg"
-                                        alt="">
-                                </div>
-                                <div class="conversation-item-content">
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet natus
-                                                    repudiandae quisquam sequi nobis suscipit consequatur rerum alias
-                                                    odio repellat!</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-                                                    tenetur!</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="conversation-item">
-                                <div class="conversation-item-side">
-                                    <img class="conversation-item-image"
-                                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_khoa_h%E1%BB%8Dc_logo_-_HUSC_01.jpg"
-                                        alt="">
-                                </div>
-                                <div class="conversation-item-content">
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eos
-                                                    ab in?</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
-                                                    debitis. Iste natus est aliquam ipsum doloremque fugiat, quidem eos
-                                                    autem? Dolor quisquam laboriosam enim cum laborum suscipit
-                                                    perferendis adipisci praesentium.</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="conversation-item me">
-                                <div class="conversation-item-side">
-                                    <img class="conversation-item-image"
-                                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                                        alt="">
-                                </div>
-                                <div class="conversation-item-content">
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, eos,
-                                                    magni temporibus, placeat consectetur nobis incidunt dicta a culpa
-                                                    vel esse. Facilis fugiat possimus eveniet accusamus dignissimos
-                                                    pariatur inventore animi rem vero, eligendi obcaecati fugit quaerat?
-                                                    Officia ex quod eaque maxime ipsam, tempore error laboriosam
-                                                    laborum, magnam ipsum doloremque quas.</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-                                                    debitis odio maiores perferendis ipsa repudiandae amet blanditiis
-                                                    quod. Ullam, dolorum.</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
-                                                    blanditiis ea, voluptatum, eveniet at harum minima maxime enim aut
-                                                    non, iure expedita excepturi tempore nostrum quasi natus voluptas
-                                                    dolore ducimus!</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="conversation-form">
-                        <button type="button" class="conversation-form-button"><i class="ri-emotion-line"></i></button>
-                        <div class="conversation-form-group">
-                            <textarea class="conversation-form-input" rows="1" placeholder="Type here..."></textarea>
-                            <button type="button" class="conversation-form-record"><i class="ri-mic-line"></i></button>
-                        </div>
-                        <button type="button" class="conversation-form-button conversation-form-submit"><i
-                                class="ri-send-plane-2-line"></i></button>
-                    </div>
-                </div>
-                <div class="conversation" id="conversation-2">
-                    <div class="conversation-top">
-                        <button type="button" class="conversation-back"><i class="ri-arrow-left-line"></i></button>
-                        <div class="conversation-user">
-                            <img class="conversation-user-image"
-                                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                                alt="">
                             <div>
-                                <div class="conversation-user-name">Someone 1</div>
-                                <div class="conversation-user-status online">online</div>
+                                <h1>TỔ CHỨC</h1>
+                                <div class="footer-org-info">
+                                    <div class="org-item">
+                                        <img src="images/HULogo.png" alt="Hue University">
+                                        <div class="org-text">
+                                            <strong>ĐẠI HỌC HUẾ</strong>
+                                            <span>Hue University</span>
+                                        </div>
+                                    </div>
+                                    <div class="org-item">
+                                        <img src="images/HuscLogo.png" alt="Hue University">
+                                        <div class="org-text">
+                                            <strong>ĐẠI HỌC KHOA HỌC HUẾ</strong>
+                                            <span>Hue University Of Sciences</span>
+                                        </div>
+                                    </div>
+                                    <div class="org-item">
+                                        <img src="images/HuscITLogo.png" alt="Hue University">
+                                        <div class="org-text">
+                                            <strong>KHOA CÔNG NGHỆ THÔNG TIN</strong>
+                                            <span>HUSC Faculty of Information Technology </span>
+                                        </div>
+                                    </div>
+                                    <div class="org-item">
+                                        <img src="images/HuscITClubLogo.png" alt="Hue University">
+                                        <div class="org-text">
+                                            <strong>CLB HỖ TRỢ LẬP TRÌNH</strong>
+                                            <span>Support Programing IT Club</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h1>KHÁM PHÁ</h1>
+                                <div class="footer-team-info">
+                                    <p>GIỚI THIỆU</p>
+                                    <p>SỰ KIỆN</p>
+                                    <p>LÀNG NGHỀ TRUYỀN THỐNG</p>
+                                    <p>ẨM THỰC</p>
+                                    <p>NGHỆ THUẬT</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="conversation-buttons">
-                            <button type="button"><i class="ri-phone-fill"></i></button>
-                            <button type="button"><i class="ri-vidicon-line"></i></button>
-                            <button type="button"><i class="ri-information-line"></i></button>
-                        </div>
-                    </div>
-                    <div class="conversation-main">
-                        <ul class="conversation-wrapper">
-                            <div class="coversation-divider"><span>Today</span></div>
-                            <li class="conversation-item me">
-                                <div class="conversation-item-side">
-                                    <img class="conversation-item-image"
-                                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                                        alt="">
-                                </div>
-                                <div class="conversation-item-content">
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet natus
-                                                    repudiandae quisquam sequi nobis suscipit consequatur rerum alias
-                                                    odio repellat!</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-                                                    tenetur!</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="conversation-item">
-                                <div class="conversation-item-side">
-                                    <img class="conversation-item-image"
-                                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                                        alt="">
-                                </div>
-                                <div class="conversation-item-content">
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eos
-                                                    ab in?</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
-                                                    debitis. Iste natus est aliquam ipsum doloremque fugiat, quidem eos
-                                                    autem? Dolor quisquam laboriosam enim cum laborum suscipit
-                                                    perferendis adipisci praesentium.</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="conversation-item me">
-                                <div class="conversation-item-side">
-                                    <img class="conversation-item-image"
-                                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                                        alt="">
-                                </div>
-                                <div class="conversation-item-content">
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, eos,
-                                                    magni temporibus, placeat consectetur nobis incidunt dicta a culpa
-                                                    vel esse. Facilis fugiat possimus eveniet accusamus dignissimos
-                                                    pariatur inventore animi rem vero, eligendi obcaecati fugit quaerat?
-                                                    Officia ex quod eaque maxime ipsam, tempore error laboriosam
-                                                    laborum, magnam ipsum doloremque quas.</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-                                                    debitis odio maiores perferendis ipsa repudiandae amet blanditiis
-                                                    quod. Ullam, dolorum.</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="conversation-item-wrapper">
-                                        <div class="conversation-item-box">
-                                            <div class="conversation-item-text">
-                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
-                                                    blanditiis ea, voluptatum, eveniet at harum minima maxime enim aut
-                                                    non, iure expedita excepturi tempore nostrum quasi natus voluptas
-                                                    dolore ducimus!</p>
-                                                <div class="conversation-item-time">12:30</div>
-                                            </div>
-                                            <div class="conversation-item-dropdown">
-                                                <button type="button" class="conversation-item-dropdown-toggle"><i
-                                                        class="ri-more-2-line"></i></button>
-                                                <ul class="conversation-item-dropdown-list">
-                                                    <li><a href="#"><i class="ri-share-forward-line"></i> Forward</a>
-                                                    </li>
-                                                    <li><a href="#"><i class="ri-delete-bin-line"></i> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="conversation-form">
-                        <button type="button" class="conversation-form-button"><i class="ri-emotion-line"></i></button>
-                        <div class="conversation-form-group">
-                            <textarea class="conversation-form-input" rows="1" placeholder="Type here..."></textarea>
-                            <button type="button" class="conversation-form-record"><i class="ri-mic-line"></i></button>
-                        </div>
-                        <button type="button" class="conversation-form-button conversation-form-submit"><i
-                                class="ri-send-plane-2-line"></i></button>
-                    </div>
-                </div>
 
-                <div class="flat-card-carousel-container">
-                    <div class="flat-card-carousel" id="flat-card-carousel">
-                        <img src=".//R(4).jpg" data-title="Ảnh 1"
-                            data-desc="Mô tả chi tiết cho ảnh aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" width="220"
-                            height="320">
-                        <img src=".//R(4).jpg" data-title="Ảnh 2" data-desc="Mô tả chi tiết cho ảnh 2" width="220"
-                            height="320">
-                        <img src=".//R(4).jpg" data-title="Ảnh 3" data-desc="Mô tả chi tiết cho ảnh 3" width="220"
-                            height="320">
-                        <img src=".//R(4).jpg" data-title="Ảnh 4" data-desc="Mô tả chi tiết cho ảnh 4" width="220"
-                            height="320">
-                        <img src=".//R(4).jpg" data-title="Ảnh 5" data-desc="Mô tả chi tiết cho ảnh 5" width="220"
-                            height="320">
-                    </div>
-                    <div class="caption">
+                        <div class="footer-more">
+                            <img src="images/FooterBackground2.png" alt="">
+                            <div class="festival-footer">
+                                <h3>TÌM HIỂU THÊM</h3>
 
-                        <div class="controls">
-                            <div class="controls-btn">
-                                <button onclick="prev()">Prev</button>
-                                <button onclick="next()">Next</button>
-                            </div>
-                            <div class="caption-text">
-                                <h2 id="title">Ảnh 1</h2>
-                                <p id="desc">Mô tả chi tiết cho ảnh 1</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="slider">
-                    <div class="slides">
-                        <div class="slide">
-                            <img src="images/TestImg1.jpg" alt="Slide 1">
-                            <div class="slide-content">
-                                <h1>BLOG</h1>
-                                <p>Nội dung 1</p>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="images/TestImg2.jpg" alt="Slide 2">
-                            <div class="slide-content">
-                                <h1>Khám phá</h1>
-                                <p>Nội dung 2</p>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="images/TestImg3.jpg" alt="Slide 3">
-                            <div class="slide-content">
-                                <h1>Du lịch</h1>
-                                <p>Nội dung 3</p>
+                                <h1> <img src="images/Logo HueFes.png" alt=""> Festival Hue <i
+                                        class="ri-facebook-circle-fill"></i> <i class="ri-instagram-fill"></i> <i
+                                        class="ri-tiktok-fill"></i> <i class="ri-youtube-fill"></i></h1>
+
+                                <p>
+                                    <strong style="color:#f27f7b">TRUNG TÂM BẢO TỒN DI TÍCH CỐ ĐÔ HUẾ</strong> - Phòng
+                                    Festival Huế,
+                                    Tổ chức sự kiện và Truyền thông
+                                </p>
+                                <p style="font-size: 14px">Email: huefestival.official@gmail.com - info@huefestival.com
+                                </p>
+                                <p style="font-size: 14px">Facebook:
+                                    https://www.facebook.com/huefestival.official/?locale=vi_VN</p>
                             </div>
                         </div>
                     </div>
-                    <div class="dots"></div>
                 </div>
                 <!-- end: Conversation -->
+
+
             </div>
-            <!-- end: Content -->
+        </div>
+
+
+        <!-- end: Content -->
         </div>
     </section>
     <!-- end: Chat -->
@@ -912,6 +698,7 @@
     <script src="modules/Card3DSelection/3dSelectionScript.js"></script>
     <script src="modules/FlatCardSliding/FlatCardSliding.js"></script>
     <script src="modules/BannerSelection/BannerSelection.js"></script>
+    <script src="modules/Plate3DSelection/Plate3DSelection.js"></script>
 </body>
 
 </html>
