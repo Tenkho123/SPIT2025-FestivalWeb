@@ -1,0 +1,88 @@
+
+.solar-system-container {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    margin-top: 5px;
+}
+
+/* Left panel */
+.sidebar {
+    width: 80px;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: relative;
+
+    border-radius: 10px;
+}
+
+.season-tab {
+    color: white;
+    font-size: 20px;
+    cursor: default;
+    user-select: none;
+}
+
+/* Earth button */
+.earth {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #4ca3dd, #1b3d5f);
+    position: absolute;
+    left: 20px;
+    cursor: grab;
+    transition: top 0.3s ease;
+}
+
+/* Content area */
+.content {
+    flex: 1;
+    display: flex;
+    background: lightblue;
+    transition: background 1s ease;
+}
+
+.text-area {
+    flex: 2;
+    padding: 40px;
+    color: white;
+    font-size: 24px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.image-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.image-area img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+/* Seasons colors */
+.spring {
+    background: #77dd77;
+}
+
+.summer {
+    background: #ffdb58;
+}
+
+.autumn {
+    background: #ff914d;
+}
+
+.winter {
+    background: #add8e6;
+}
