@@ -24,7 +24,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*
 body,
 html {
     height: 100%;
@@ -32,10 +32,10 @@ html {
     background-color: var(--background);
     color: var(--text-primary);
     overflow: hidden;
-    /* Prevent page scrolling */
+     Prevent page scrolling 
     display: grid;
     align-items: center;
-}
+}*/
 
 /* Typography */
 h1,
