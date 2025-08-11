@@ -1346,6 +1346,7 @@ body {
 
 @media screen and (max-width: 767px) {
     .chat-section {
+        min-height: 100vh;
         overflow-x: hidden;
     }
 
