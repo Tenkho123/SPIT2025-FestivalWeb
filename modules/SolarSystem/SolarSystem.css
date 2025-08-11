@@ -91,7 +91,7 @@
 }
 
 .image-area img {
-    max-width: 80%;
+    max-width: 100%;
     border-radius: 10px;
 }
 
@@ -163,6 +163,6 @@
 
 @media screen and (max-width: 767px) {
     .solar-system-container {
-        height:800px;
+        height:1200px;
     }
 }
