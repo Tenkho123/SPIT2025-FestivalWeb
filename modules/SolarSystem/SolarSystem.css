@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
 
 .solar-system-container {
     display: flex;
@@ -20,6 +21,16 @@
     border-radius: 10px;
 }
 
+.sidebar {
+    background: linear-gradient(
+        to bottom,
+        #77dd77 0%, 
+        #ffdb58 33%,
+        #ff914d 66%,
+        #add8e6 100%
+    );
+}
+
 .season-tab {
     color: white;
     font-size: 20px;
@@ -29,12 +40,12 @@
 
 /* Earth button */
 .earth {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 30%, #4ca3dd, #1b3d5f);
     position: absolute;
-    left: 20px;
+    left: 10px;
     cursor: grab;
     transition: top 0.3s ease;
     touch-action: none;
@@ -46,15 +57,28 @@
     display: flex;
     background: lightblue;
     transition: background 1s ease;
+
+    border-radius: 16px;
+}
+
+.season-table-header div {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
 }
 
 .text-area {
     flex: 2;
-    padding: 40px;
-    color: white;
+    padding: 20px;
+    color: black;
     font-size: 24px;
     opacity: 1;
     transition: opacity 0.5s ease;
+    width: 1200px;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+
+    overflow-y: auto;
 }
 
 .image-area {
@@ -87,6 +111,55 @@
 .winter {
     background: #add8e6;
 }
+
+/* Start: Columns content */
+.season-table-header, 
+.season-table-row {
+  display: flex;
+  padding: 4px 0;
+}
+
+.season-table-header {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.season-table-row {
+  border-bottom: 1px solid #eee;
+}
+
+.season-table-cell {
+  /* Base flex, overridden per column */
+  padding: 0 6px;
+}
+
+.col-name {
+  flex: 3;
+}
+
+.col-time {
+  flex: 1.5;
+}
+
+.col-location {
+  flex: 2;
+}
+
+.current-event {
+  background-color: #fff3cd; /* light yellow highlight */
+  animation: highlightPulse 1.5s infinite alternate;
+  border-radius: 8px;
+  margin: 10px 0px 10px 0px;
+}
+
+@keyframes highlightPulse {
+  from { background-color: #fff3cd; }
+  to { background-color: #ffe8a1; }
+}
+/* End: Column contents */
 
 @media screen and (max-width: 0px) {
     .solar-system-container {
