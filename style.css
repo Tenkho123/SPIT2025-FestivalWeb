@@ -29,7 +29,7 @@ body {
     justify-content: center;
     background-color: var(--slate-100);
 
-    overflow: scroll;
+    overflow: auto;
 }
 
 .chat-container {
