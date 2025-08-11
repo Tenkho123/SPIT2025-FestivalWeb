@@ -31,8 +31,8 @@ body {
     justify-content: center;
     background-color: var(--slate-100);
 
-    overflow: auto;
-    
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .chat-container {
