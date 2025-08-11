@@ -506,10 +506,14 @@ body {
     width: 100%;
     top: 230px;
     height: auto;
+
+    
 }
 
 .slider-container {
     height: 400px;
+    padding: 40px;
+    
 }
 
 .flat-card-container{
@@ -563,6 +567,11 @@ body {
     border-radius: 20px;
 }
 
+.cards3D > img {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
 .cards3D > h1 > img,
 .flat-card-container > h1 > img,
 .slider-container > h1 > img {
@@ -571,6 +580,11 @@ body {
     width: 480px;
     height: 4px;
     object-fit: fill;
+}
+
+.slider-container {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 40px;
 }
 
 .flat-card-container > h1 > img {
@@ -582,8 +596,9 @@ body {
 }
 
 .flat-card-container > img{
-    top:71%;
+    top:53%;
     transform: translate(-50%,-50%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .introduction-background {
@@ -1355,7 +1370,7 @@ body {
     }
 
     .flat-card-container > img{
-        top: 90%;
+        top: 60%;
         width: 150%;
         height: 135%;
     }
@@ -1364,6 +1379,7 @@ body {
         top: 850px;
         width: 100%;
         height: 590px;
+
     }
 
     .cards-background {
