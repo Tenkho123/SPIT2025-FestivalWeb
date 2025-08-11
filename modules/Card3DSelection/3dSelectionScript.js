@@ -64,12 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Rotate carousel
     function rotateCarousel() {
         carousel.style.transform = `rotateY(${theta}deg)`;
-
+        
+        const step = 360 / totalCards;
         // Update current card index
-        currentIndex = Math.round(
-            Math.abs(theta / (360 / totalCards)) % totalCards
-        );
-        if (currentIndex >= totalCards) currentIndex = 0;
+        currentIndex = ((Math.round(-theta / step) % totalCards) + totalCards) % totalCards;
     }
 
     // Next card

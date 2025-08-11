@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const plate_carousel = document.getElementById("memory-plate-carousel");
     const plate_cards = document.querySelectorAll(".memory-plate-card");
     const platePrevBtn = document.getElementById("prev-plate-btn");
-    const platplateNextvBtn = document.getElementById("next-plate-btn");
+    const plateNextBtn = document.getElementById("next-plate-btn");
 
     // Variables
     let currentIndexP = 0;
@@ -16,17 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize
     function init() {
-        // Position plate_cards in a circle
         arrangeCards();
+        rotateCarousel();
 
-        // Add event listeners
         platePrevBtn.addEventListener("click", prevCard);
-        platplateNextvBtn.addEventListener("click", nextCard);
+        plateNextBtn.addEventListener("click", nextCard);
         plate_cards.forEach((card) => {
             card.addEventListener("click", flipCard);
         });
 
-        // Touch/mouse events for dragging
         plate_carousel.addEventListener("mousedown", dragStart);
         plate_carousel.addEventListener("touchstart", dragStart, { passive: true });
         document.addEventListener("mousemove", drag);
@@ -34,10 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.addEventListener("mouseup", dragEnd);
         document.addEventListener("touchend", dragEnd);
 
-        // Keyboard navigation
         document.addEventListener("keydown", handleKeyDown);
 
-        // Start ambient sound
         playAmbientSound();
     }
 
@@ -65,11 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function rotateCarousel() {
         plate_carousel.style.transform = `rotateY(${thetaP}deg)`;
 
-        // Update current card index
-        currentIndexP = Math.round(
-            Math.abs(thetaP / (360 / totalCardsP)) % totalCardsP
-        );
-        if (currentIndexP >= totalCardsP) currentIndexP = 0;
+        const step = 360 / totalCardsP;
+
+        // Correct index for both positive & negative thetaP
+        currentIndexP = ((Math.round(-thetaP / step) % totalCardsP) + totalCardsP) % totalCardsP;
+
 
         // Show paragraph only for active card
         plate_cards.forEach((card, index) => {
@@ -80,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
 
     // Next card
     function nextCard() {
