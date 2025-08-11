@@ -172,4 +172,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     init();
+
+    plate_cards.forEach((card, index) => {
+        if (index === currentIndexP) {
+            card.querySelector('.card-plate-content')?.classList.add('visible');
+        } else {
+            card.querySelector('.card-plate-content')?.classList.remove('visible');
+        }
+    });
 });
+
