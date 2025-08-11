@@ -12,13 +12,34 @@ const seasons = [
 let isDragging = false;
 let startY, earthY;
 
-const topY = 0;
-const bottomY = 540;
+const sidebar = document.querySelector(".sidebar");
+let topY = 0;
+let bottomY = 0;
+let lastSizeCategory = null; // "mobile" or "desktop"
+
+function updateBottomY() {
+    if (!sidebar) return;
+    bottomY = sidebar.offsetHeight - 60;
+}
+
+function checkAndUpdateBottomY() {
+    const sizeCategory = window.innerWidth <= 767 ? "mobile" : "desktop";
+    if (sizeCategory !== lastSizeCategory) {
+        lastSizeCategory = sizeCategory;
+        updateBottomY();
+        console.log(`bottomY recalculated for ${sizeCategory}:`, bottomY);
+    }
+}
+
+checkAndUpdateBottomY();
+
+// Recalculate on resize
+window.addEventListener("resize", checkAndUpdateBottomY);
 
 earth.style.top = topY + 'px';
 
 // Start: Change season with sidebar
-const sidebar = document.querySelector('.sidebar');
+
 
 sidebar.addEventListener('click', (e) => {
     handleSidebarClick(e.clientY);
