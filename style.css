@@ -1380,7 +1380,7 @@ body {
 .footer-more {
     position: absolute;
     left: 420px;
-    bottom: 10px;
+    bottom: -10px;
 
     width: 900px;
     height: 205px;
