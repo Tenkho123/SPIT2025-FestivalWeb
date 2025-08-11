@@ -1,6 +1,6 @@
 /* Base Styles */
 :root {
-    --primary: #9d00ff;
+    --primary: #ff3300;
     --secondary: #00e5ff;
     --accent: #ff00e5;
     --background: #050510;
@@ -173,7 +173,7 @@ h6 {
 }
 
 .plate-control-btn {
-    background: rgba(20, 20, 40, 0.7);
+    background: rgba(40, 30, 20, 0.7);
     border: 1px solid var(--primary);
     color: var(--text-primary);
     width: 40px;
@@ -188,7 +188,7 @@ h6 {
 }
 
 .plate-control-btn:hover {
-    background: rgba(30, 30, 60, 0.9);
+    background: rgba(60, 41, 30, 0.9);
     transform: scale(1.1);
 }
 

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
 
 .solar-system-container {
+    position: relative;
     display: flex;
     width: 100%;
     height: 500px;
@@ -10,6 +11,8 @@
 /* Left panel */
 .sidebar {
     width: 80px;
+    top: -15px;
+    
     background: #222;
     display: flex;
     flex-direction: column;
@@ -19,6 +22,8 @@
     position: relative;
 
     border-radius: 10px;
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
 .sidebar {
@@ -53,9 +58,10 @@
 
 /* Content area */
 .content {
+    position: relative;
     flex: 1;
     display: flex;
-    background: lightblue;
+    /* background: lightblue; */
     transition: background 1s ease;
 
     border-radius: 16px;
@@ -81,6 +87,25 @@
     overflow-y: auto;
 }
 
+
+.text-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.text-area::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.4);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.text-arean::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(100, 100, 100, 0.7);
+}
+
 .image-area {
     flex: 1;
     display: flex;
@@ -96,7 +121,7 @@
 }
 
 /* Seasons colors */
-.spring {
+/* .spring {
     background: #77dd77;
 }
 
@@ -110,7 +135,7 @@
 
 .winter {
     background: #add8e6;
-}
+} */
 
 /* Start: Columns content */
 .season-table-header, 
@@ -153,6 +178,44 @@
   animation: highlightPulse 1.5s infinite alternate;
   border-radius: 8px;
   margin: 10px 0px 10px 0px;
+}
+
+.ss-backgrounds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* keep it behind content */
+
+    transform: scaleY(-1);
+    opacity: 0.6;
+
+    
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* fade effect */
+
+    background-color: rgba(0, 0, 0, 0.1); /* black overlay */
+    background-blend-mode: darken;        /* blend with image */
+}
+
+.spring-bg { background-image: url('../../images/Spring.png'); }
+.summer-bg { background-image: url('../../images/Summer.png'); }
+.autumn-bg { background-image: url('../../images/Autumn.png'); }
+.winter-bg { background-image: url('../../images/Winter.png'); }
+
+.bg.visible {
+    opacity: 1;
 }
 
 @keyframes highlightPulse {

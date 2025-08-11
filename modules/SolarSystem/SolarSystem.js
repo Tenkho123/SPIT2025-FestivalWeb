@@ -118,36 +118,13 @@ document.addEventListener('mouseup', dragEnd);
 document.addEventListener('touchend', dragEnd);
 document.addEventListener('touchcancel', dragEnd);
 
-// ... rest of your code remains unchanged ...
-
-// function updateSeasonByPosition(y) {
-//   let progress = (y - topY) / (bottomY - topY);
-//   progress = Math.min(progress, 0.9999);
-//   let index = Math.floor(progress * seasons.length);
-//   let nextIndex = Math.min(index + 1, seasons.length - 1);
-
-//   let color = blendColors(
-//     hexToRgb(seasons[index].color),
-//     hexToRgb(seasons[nextIndex].color),
-//     (progress * seasons.length) % 1
-//   );
-//   content.style.backgroundColor = `rgb(${color.r}, ${color.g}, ${color.b})`;
-
-//   seasons.forEach((_, i) => {
-//     let imgEl = document.getElementById(`season-${i}`);
-//     if (imgEl) imgEl.style.opacity = (i === index) ? 1 : 0;
-//   });
-
-//   text.textContent = seasons[index].text;
-// }
-
 function updateSeasonByPosition(y) {
     let progress = (y - topY) / (bottomY - topY);
     progress = Math.min(progress, 0.9999);
     let index = Math.floor(progress * seasons.length);
 
     // Update background color class on content
-    content.className = 'content ' + seasons[index].name;
+    // content.className = 'content ' + seasons[index].name;
 
     // Show/hide text blocks
     seasons.forEach((season, i) => {
@@ -161,8 +138,12 @@ function updateSeasonByPosition(y) {
         let imgEl = document.getElementById(`season-${i}`);
         if (imgEl) imgEl.style.opacity = (i === index) ? 1 : 0;
     });
-}
 
+    // Toggle visible background
+    document.querySelectorAll('.bg').forEach((bg, i) => {
+        bg.classList.toggle('visible', i === index);
+    });
+}
 
 function hexToRgb(hex) {
     hex = hex.replace('#', '');
@@ -264,87 +245,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-// (function debugHighlightCurrentEvents() {
-//   const rows = document.querySelectorAll('.season-table-row');
-//   console.log('Found rows:', rows.length);
-
-//   const today = new Date();
-//   today.setHours(0,0,0,0); // compare date-only
-
-//   // robust parser for strings like:
-//   // "06/08/2025 – 18/08/2025", "15/12 – 18/12/2025", "03/10/2025", etc.
-//   function parseFlexibleDateRange(text) {
-//     if (!text) return null;
-//     text = text.replace(/\u00A0/g, ' ').replace(/\s+/g, ' ').trim(); // normalize spaces & NBSP
-
-//     // Range with optional years on either side:
-//     // captures: d1/m1(/y1)?  sep  d2/m2(/y2)?
-//     const rangeRegex = /(\d{1,2})\/(\d{1,2})(?:\/(\d{4}))?\s*(?:–|—|-|to)\s*(\d{1,2})\/(\d{1,2})(?:\/(\d{4}))?/i;
-//     const r = text.match(rangeRegex);
-//     if (r) {
-//       let d1 = parseInt(r[1],10), m1 = parseInt(r[2],10), y1 = r[3] ? parseInt(r[3],10) : null;
-//       let d2 = parseInt(r[4],10), m2 = parseInt(r[5],10), y2 = r[6] ? parseInt(r[6],10) : null;
-
-//       // infer missing years
-//       if (!y1 && y2) y1 = y2;
-//       if (!y2 && y1) y2 = y1;
-//       if (!y1 && !y2) {
-//         y1 = y2 = (new Date()).getFullYear();
-//       }
-
-//       let start = new Date(y1, m1 - 1, d1);
-//       start.setHours(0,0,0,0);
-//       let end = new Date(y2, m2 - 1, d2);
-//       end.setHours(23,59,59,999);
-
-//       // if start > end, assume range crosses year boundary -> add 1 year to end
-//       if (start > end) end.setFullYear(end.getFullYear() + 1);
-
-//       return { start, end };
-//     }
-
-//     // single date with year
-//     const singleRegex = /(\d{1,2})\/(\d{1,2})\/(\d{4})/;
-//     const s = text.match(singleRegex);
-//     if (s) {
-//       const start = new Date(parseInt(s[3],10), parseInt(s[2],10)-1, parseInt(s[1],10));
-//       start.setHours(0,0,0,0);
-//       const end = new Date(start);
-//       end.setHours(23,59,59,999);
-//       return { start, end };
-//     }
-
-//     return null; // couldn't parse
-//   }
-
-//   rows.forEach((row, i) => {
-//     const dateCell = row.querySelector('.col-time');
-//     const raw = dateCell ? dateCell.textContent.trim() : '';
-//     console.log(`Row ${i}: raw text -> "${raw}"`);
-
-//     const parsed = parseFlexibleDateRange(raw);
-//     if (!parsed) {
-//       console.warn(`Row ${i}: could not parse date string: "${raw}"`);
-//       // Visual debug: mark unparsed rows
-//       row.style.outline = '2px dashed orange';
-//       return;
-//     }
-
-//     console.log(`Row ${i}: parsed start=${parsed.start.toISOString()} end=${parsed.end.toISOString()}`);
-//     const isCurrent = today >= parsed.start && today <= parsed.end;
-//     console.log(`Row ${i}: isCurrent=${isCurrent}`);
-
-//     if (isCurrent) {
-//       // add class and a visible outline while debugging
-//       row.classList.add('current-event');
-//       row.style.outline = '3px solid red';         // temporary debug highlight
-//       row.style.transition = 'box-shadow .2s';
-//     }
-//   });
-
-//   // optional: scroll to the first current event
-//   const first = document.querySelector('.season-table-row.current-event');
-//   if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-// })();
