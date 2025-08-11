@@ -39,7 +39,7 @@ body {
     height: 100%;
     /*1780px; 720px;*/
     box-shadow: 0 8px 24px -4px rgba(0, 0, 0, .1);
-    /* background-color: var(--white); */
+    /* background-color: var(--blue-600); */
     position: relative;
 }
 
@@ -507,8 +507,13 @@ body {
     height: auto;
 }
 
+.slider-container {
+    height: 400px;
+}
+
 .flat-card-container{
     margin-top: 110px;
+    /* height: 600px; */
 }
 
 .slider-container {
@@ -1146,6 +1151,7 @@ body {
     position: relative;
     width: 100%;
     height: 600px;
+    top: -80px;
 }
 
 .footer>img:nth-child(1) {
@@ -1320,6 +1326,50 @@ body {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .chat-section {
+        overflow-x: hidden;
+    }
+
+
+    .cards3D{
+        top: 500px;
+    }
+
+    .cards3D > h1 {
+        top: -230px;
+    }
+
+    .cards3D > img{
+        width: 100%;
+        height: 131%;
+    }
+
+    .flat-card-container {
+        top: 850px;
+    }
+
+    .flat-card-container > h1 {
+        top: -200px;
+    }
+
+    .flat-card-container > img{
+        top: 90%;
+        width: 150%;
+        height: 135%;
+    }
+
+    .slider-container {
+        top: 850px;
+        width: 100%;
+        height: 590px;
+    }
+
+    .cards-background {
+        height: 3730px;
+    }
+}
+
 @media screen and (max-width: 0px) {
     /* .intro-section {
         width: 767px;
@@ -1446,9 +1496,7 @@ body {
         display: flex;
     }
 
-    .cards3D {
-        padding-top: 80px;
-    }
+    
 
     /* .conversation-default.active {
         display: none;

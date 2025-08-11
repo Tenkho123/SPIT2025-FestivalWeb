@@ -37,6 +37,7 @@
     left: 20px;
     cursor: grab;
     transition: top 0.3s ease;
+    touch-action: none;
 }
 
 /* Content area */

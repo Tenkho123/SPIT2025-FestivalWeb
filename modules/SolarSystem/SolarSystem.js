@@ -1,5 +1,3 @@
-// Your original vertical code stays as is
-// ---------------------------------------------------
 const earth = document.querySelector('.earth');
 const content = document.getElementById('content');
 const text = document.getElementById('text');
@@ -32,6 +30,7 @@ document.addEventListener('mousemove', (e) => {
     let dy = e.clientY - startY;
     let newY = Math.min(Math.max(earthY + dy, topY), bottomY);
     earth.style.top = newY + 'px';
+
     updateSeasonByPosition(newY);
 });
 
@@ -41,11 +40,14 @@ document.addEventListener('mouseup', () => {
 
 function updateSeasonByPosition(y) {
   let progress = (y - topY) / (bottomY - topY);
+  
+  // Clamp progress to [0, 0.9999] so we don't skip last index mid-blend
   progress = Math.min(progress, 0.9999);
 
   let index = Math.floor(progress * seasons.length);
   let nextIndex = Math.min(index + 1, seasons.length - 1);
 
+  // Blend background color
   let color = blendColors(
     hexToRgb(seasons[index].color),
     hexToRgb(seasons[nextIndex].color),
@@ -53,13 +55,18 @@ function updateSeasonByPosition(y) {
   );
   content.style.backgroundColor = `rgb(${color.r}, ${color.g}, ${color.b})`;
 
+  // Fade only current image to 1
   seasons.forEach((_, i) => {
     let imgEl = document.getElementById(`season-${i}`);
     imgEl.style.opacity = (i === index) ? 1 : 0;
   });
 
+  // Update text
   text.textContent = seasons[index].text;
 }
+
+
+
 
 function hexToRgb(hex) {
     hex = hex.replace('#', '');
@@ -80,65 +87,7 @@ function blendColors(c1, c2, factor) {
     };
 }
 
-// Set default to Summer
 const summerIndex = 1; // Summer
 const summerY = (bottomY - topY) * (summerIndex / (seasons.length - 1));
 earth.style.top = summerY + 'px';
 updateSeasonByPosition(summerY);
-
-// ---------------------------------------------------
-// Horizontal mode for mobile (<= 767px) — Separate logic
-// ---------------------------------------------------
-if (window.matchMedia("(max-width: 767px)").matches) {
-    let startX, earthX;
-    const leftX = 0;
-    const rightX = 560; // adjust if needed
-
-    earth.style.left = leftX + 'px';
-
-    earth.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.clientX;
-        earthX = parseInt(earth.style.left) || 0;
-        earth.style.transition = 'none';
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        let dx = e.clientX - startX;
-        let newX = Math.min(Math.max(earthX + dx, leftX), rightX);
-        earth.style.left = newX + 'px';
-        updateSeasonByPositionHorizontal(newX);
-    });
-
-    document.addEventListener('mouseup', () => {
-        isDragging = false;
-    });
-
-    function updateSeasonByPositionHorizontal(x) {
-        let progress = (x - leftX) / (rightX - leftX);
-        progress = Math.min(progress, 0.9999);
-
-        let index = Math.floor(progress * seasons.length);
-        let nextIndex = Math.min(index + 1, seasons.length - 1);
-
-        let color = blendColors(
-          hexToRgb(seasons[index].color),
-          hexToRgb(seasons[nextIndex].color),
-          (progress * seasons.length) % 1
-        );
-        content.style.backgroundColor = `rgb(${color.r}, ${color.g}, ${color.b})`;
-
-        seasons.forEach((_, i) => {
-            let imgEl = document.getElementById(`season-${i}`);
-            imgEl.style.opacity = (i === index) ? 1 : 0;
-        });
-
-        text.textContent = seasons[index].text;
-    }
-
-    // Default Summer for horizontal mode
-    const summerX = (rightX - leftX) * (summerIndex / (seasons.length - 1));
-    earth.style.left = summerX + 'px';
-    updateSeasonByPositionHorizontal(summerX);
-}

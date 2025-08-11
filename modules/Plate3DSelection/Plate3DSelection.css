@@ -192,56 +192,9 @@ h6 {
     transform: scale(1.1);
 }
 
-/* Animations */
-@keyframes pulse {
 
-    0%,
-    100% {
-        opacity: 0.8;
-    }
-
-    50% {
-        opacity: 1;
-    }
-}
-
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-    :root {
-        --card-width: 250px;
-        --card-height: 350px;
-        --carousel-radius: 300px;
-    }
-
-    .title {
-        font-size: 1.8rem;
-    }
-
     .carousel-plate-container {
-        height: 400px;
-    }
-
-    .memory-plate-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .memory-plate-image {
-        height: 120px;
-    }
-}
-
-@media (max-width: 576px) {
-    :root {
-        --card-width: 220px;
-        --card-height: 320px;
-        --carousel-radius: 250px;
-    }
-
-    .title {
-        font-size: 1.5rem;
-    }
-
-    .carousel-plate-container {
-        height: 350px;
+        transform: scale(1.5);
     }
 }

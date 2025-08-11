@@ -357,7 +357,7 @@ footer {
 }
 
 /* Animations */
-@keyframes pulse {
+/* @keyframes pulse {
 
     0%,
     100% {
@@ -367,11 +367,14 @@ footer {
     50% {
         opacity: 1;
     }
-}
+} */
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-    :root {
+    .carousel-container {
+        transform: scale(1.5);
+    }
+
+    /* :root {
         --card-width: 250px;
         --card-height: 350px;
         --carousel-radius: 300px;
@@ -391,10 +394,10 @@ footer {
 
     .memory-image {
         height: 120px;
-    }
+    } */
 }
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
     :root {
         --card-width: 220px;
         --card-height: 320px;
@@ -408,4 +411,4 @@ footer {
     .carousel-container {
         height: 350px;
     }
-}
+} */
