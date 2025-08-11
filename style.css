@@ -1617,17 +1617,17 @@ a:visited {
     }
 
     .chat-content {
-        position: relative;
+        /* position: relative; */
         /* max-width: 767px; */
         /* padding-top: 156px; */
         /* height: calc(100% - 48px); */
     }
 
     .chat-content {
-        transform-origin: top left;
-        zoom: calc(100vw / 767);
+        /* transform-origin: top left;
+        zoom: calc(100vw / 767); */
         /* transform: scale(calc(100vw / 767)); */
-        height: auto; /* maintain proportions */
+        /*height: auto;  maintain proportions */
     }
 
     .conversation.active {
