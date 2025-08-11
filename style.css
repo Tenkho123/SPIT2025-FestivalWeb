@@ -1357,8 +1357,8 @@ body {
     }
 
     .cards3D > img{
-        width: 100%;
-        height: 131%;
+        width: 120%;
+        height: 141%;
     }
 
     .flat-card-container {
@@ -1379,7 +1379,7 @@ body {
         top: 850px;
         width: 100%;
         height: 590px;
-
+        padding:0px;
     }
 
     .cards-background {
