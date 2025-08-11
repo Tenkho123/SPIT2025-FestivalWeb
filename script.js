@@ -27,3 +27,10 @@ scrollableDiv.addEventListener('scroll', () => {
 // Optional: Start hidden
 scrollableDiv.classList.add('hide-scrollbar');
 // end: Scrollbar
+
+function setVH() {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+}
+
+setVH();
+window.addEventListener('resize', setVH);
