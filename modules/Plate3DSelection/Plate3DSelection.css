@@ -1,5 +1,5 @@
 /* Base Styles */
-:root {
+/* :root {
     --primary: #ff3300;
     --secondary: #00e5ff;
     --accent: #000000;
@@ -17,7 +17,7 @@
     --card-height: 420px;
     --carousel-radius: 400px;
     --transition-speed: 0.5s;
-}
+} */
 
 * {
     margin: 0;
