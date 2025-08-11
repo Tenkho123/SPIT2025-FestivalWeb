@@ -21,6 +21,7 @@ body {
 
 /* start: Chat */
 .chat-section {
+    position: relative;
     box-shadow: inset 0 160px 0 0 var(--blue-600);
     /* min-height: 100dvh; */
     /* min-height: 100%; */

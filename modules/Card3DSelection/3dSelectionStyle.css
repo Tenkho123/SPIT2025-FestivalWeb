@@ -170,9 +170,9 @@ h6 {
 
 .card-front {
     background: linear-gradient(135deg,
-            rgba(102, 53, 53, 0.8),
+            rgba(54, 27, 16, 0.692),
             rgba(20, 20, 40, 0.9));
-    border: 1px solid rgba(255, 255, 255, 0.445);
+    border: 1px solid rgba(61, 43, 20, 0.521);
     transform-style: preserve-3d;
 }
 
